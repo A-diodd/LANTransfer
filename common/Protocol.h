@@ -1,5 +1,5 @@
 #ifndef PROTOCOL_H
-#define PROTOCOL_h
+#define PROTOCOL_H
 
 #include <QByteArray>
 #include <QString>

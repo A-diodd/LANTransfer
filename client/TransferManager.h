@@ -3,6 +3,9 @@
 
 #include <QObject>
 #include <QString>
+#include <QJsonObject>
+
+#include "../common/Protocol.h"
 
 class NetworkManager;
 

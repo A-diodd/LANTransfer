@@ -42,10 +42,13 @@ template <> constexpr inline auto NetworkManager::qt_create_metaobjectdata<qt_me
         "connected",
         "",
         "disconnected",
-        "dataReceived",
-        "data",
         "errorOccurred",
         "message",
+        "messageReceived",
+        "Protocol::MessageType",
+        "type",
+        "QJsonObject",
+        "payload",
         "onConnected",
         "onDisconnected",
         "onReadyRead",
@@ -59,23 +62,23 @@ template <> constexpr inline auto NetworkManager::qt_create_metaobjectdata<qt_me
         QtMocHelpers::SignalData<void()>(1, 2, QMC::AccessPublic, QMetaType::Void),
         // Signal 'disconnected'
         QtMocHelpers::SignalData<void()>(3, 2, QMC::AccessPublic, QMetaType::Void),
-        // Signal 'dataReceived'
-        QtMocHelpers::SignalData<void(const QByteArray &)>(4, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QByteArray, 5 },
-        }}),
         // Signal 'errorOccurred'
-        QtMocHelpers::SignalData<void(const QString &)>(6, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { QMetaType::QString, 7 },
+        QtMocHelpers::SignalData<void(const QString &)>(4, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::QString, 5 },
+        }}),
+        // Signal 'messageReceived'
+        QtMocHelpers::SignalData<void(Protocol::MessageType, const QJsonObject &)>(6, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { 0x80000000 | 7, 8 }, { 0x80000000 | 9, 10 },
         }}),
         // Slot 'onConnected'
-        QtMocHelpers::SlotData<void()>(8, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(11, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'onDisconnected'
-        QtMocHelpers::SlotData<void()>(9, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(12, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'onReadyRead'
-        QtMocHelpers::SlotData<void()>(10, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(13, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'onErrorOccurred'
-        QtMocHelpers::SlotData<void(QAbstractSocket::SocketError)>(11, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { 0x80000000 | 12, 13 },
+        QtMocHelpers::SlotData<void(QAbstractSocket::SocketError)>(14, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 15, 16 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -102,8 +105,8 @@ void NetworkManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         switch (_id) {
         case 0: _t->connected(); break;
         case 1: _t->disconnected(); break;
-        case 2: _t->dataReceived((*reinterpret_cast<std::add_pointer_t<QByteArray>>(_a[1]))); break;
-        case 3: _t->errorOccurred((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 2: _t->errorOccurred((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
+        case 3: _t->messageReceived((*reinterpret_cast<std::add_pointer_t<Protocol::MessageType>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QJsonObject>>(_a[2]))); break;
         case 4: _t->onConnected(); break;
         case 5: _t->onDisconnected(); break;
         case 6: _t->onReadyRead(); break;
@@ -128,9 +131,9 @@ void NetworkManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
             return;
         if (QtMocHelpers::indexOfMethod<void (NetworkManager::*)()>(_a, &NetworkManager::disconnected, 1))
             return;
-        if (QtMocHelpers::indexOfMethod<void (NetworkManager::*)(const QByteArray & )>(_a, &NetworkManager::dataReceived, 2))
+        if (QtMocHelpers::indexOfMethod<void (NetworkManager::*)(const QString & )>(_a, &NetworkManager::errorOccurred, 2))
             return;
-        if (QtMocHelpers::indexOfMethod<void (NetworkManager::*)(const QString & )>(_a, &NetworkManager::errorOccurred, 3))
+        if (QtMocHelpers::indexOfMethod<void (NetworkManager::*)(Protocol::MessageType , const QJsonObject & )>(_a, &NetworkManager::messageReceived, 3))
             return;
     }
 }
@@ -179,14 +182,14 @@ void NetworkManager::disconnected()
 }
 
 // SIGNAL 2
-void NetworkManager::dataReceived(const QByteArray & _t1)
+void NetworkManager::errorOccurred(const QString & _t1)
 {
     QMetaObject::activate<void>(this, &staticMetaObject, 2, nullptr, _t1);
 }
 
 // SIGNAL 3
-void NetworkManager::errorOccurred(const QString & _t1)
+void NetworkManager::messageReceived(Protocol::MessageType _t1, const QJsonObject & _t2)
 {
-    QMetaObject::activate<void>(this, &staticMetaObject, 3, nullptr, _t1);
+    QMetaObject::activate<void>(this, &staticMetaObject, 3, nullptr, _t1, _t2);
 }
 QT_WARNING_POP

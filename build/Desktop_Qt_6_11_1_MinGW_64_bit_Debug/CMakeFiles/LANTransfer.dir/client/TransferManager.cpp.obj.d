@@ -323,19 +323,15 @@ CMakeFiles/LANTransfer.dir/client/TransferManager.cpp.obj: \
  D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio \
  D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ctime \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QString \
- D:\01_Study\08_qt\LANTransfer\client\NetworkManager.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/QTcpSocket \
- D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qtcpsocket.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qtnetworkglobal.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qtnetwork-config.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qtnetworkexports.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qabstractsocket.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qiodevice.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qspan.h \
- D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cassert \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q20iterator.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qhostaddress.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QJsonObject \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonobject.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonvalue.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcborvalue.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcborcommon.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qshareddata.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdatetime.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcalendar.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qlocale.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qvariant.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdebug.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtextstream.h \
@@ -356,22 +352,26 @@ CMakeFiles/LANTransfer.dir/client/TransferManager.cpp.obj: \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qalloc.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q23utility.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q20utility.h \
- D:/01_Study/08_qt/LANTransfer/common/Protocol.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QByteArray \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QJsonObject \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonobject.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonvalue.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcborvalue.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcborcommon.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdatetime.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcalendar.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qlocale.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qregularexpression.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qurl.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/quuid.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qendian.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsondocument.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonparseerror.h \
+ D:/01_Study/08_qt/LANTransfer/common/Protocol.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QByteArray \
+ D:\01_Study\08_qt\LANTransfer\client\NetworkManager.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/QTcpSocket \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qtcpsocket.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qtnetworkglobal.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qtnetwork-config.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qtnetworkexports.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qabstractsocket.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qiodevice.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qspan.h \
+ D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cassert \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q20iterator.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qhostaddress.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QFileInfo \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfileinfo.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfile.h \

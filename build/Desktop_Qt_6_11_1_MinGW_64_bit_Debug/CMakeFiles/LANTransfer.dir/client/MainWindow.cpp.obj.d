@@ -396,16 +396,29 @@ CMakeFiles/LANTransfer.dir/client/MainWindow.cpp.obj: \
  D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qabstractsocket.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qiodevice.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qhostaddress.h \
- D:\01_Study\08_qt\LANTransfer\client\TransferManager.h \
+ D:/01_Study/08_qt/LANTransfer/common/Protocol.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QByteArray \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QString \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QJsonObject \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonobject.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonvalue.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcborvalue.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcborcommon.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdatetime.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcalendar.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qlocale.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qregularexpression.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qurl.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/quuid.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsondocument.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonparseerror.h \
+ D:\01_Study\08_qt\LANTransfer\client\TransferManager.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/QComboBox \
  D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qcombobox.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qstyleoption.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qlocale.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qabstractspinbox.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtGui/qvalidator.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qregularexpression.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qslider.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qabstractslider.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qstyle.h \
@@ -448,12 +461,9 @@ CMakeFiles/LANTransfer.dir/client/MainWindow.cpp.obj: \
  D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/codecvt \
  D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_dir.h \
  D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdatetime.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcalendar.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfile.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfileinfo.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtimezone.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qurl.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qdialog.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/QGroupBox \
  D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qgroupbox.h \

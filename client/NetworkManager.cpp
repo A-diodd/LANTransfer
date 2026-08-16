@@ -37,7 +37,7 @@ void NetworkManager::disconnectFromServer()
     socket->disconnectFromHost();
 }
 
-void NetworkManager::sendData(const QByteArray &data)
+void NetworkManager::sendData( const QByteArray &data)
 {
     if (!isConnected())
         return;

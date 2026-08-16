@@ -1,6 +1,10 @@
 D:/01_Study/08_qt/LANTransfer/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/LANTransfer_autogen/7EM65HM6UG/moc_NetworkManager.cpp: D:/01_Study/08_qt/LANTransfer/client/NetworkManager.h \
   D:/01_Study/08_qt/LANTransfer/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/LANTransfer_autogen/moc_predefs.h \
+  D:/01_Study/08_qt/LANTransfer/common/Protocol.h \
+  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QByteArray \
+  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QJsonObject \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QObject \
+  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QString \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q17memory.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q20bit.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q20functional.h \
@@ -25,6 +29,9 @@ D:/01_Study/08_qt/LANTransfer/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/LANTran
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qbytearrayalgorithms.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qbytearraylist.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qbytearrayview.h \
+  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcalendar.h \
+  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcborcommon.h \
+  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcborvalue.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qchar.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcompare.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcompare_impl.h \
@@ -38,7 +45,9 @@ D:/01_Study/08_qt/LANTransfer/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/LANTran
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcontiguouscache.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdarwinhelpers.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdatastream.h \
+  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdatetime.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdebug.h \
+  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qendian.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qexceptionhandling.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qflags.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfloat16.h \
@@ -54,8 +63,13 @@ D:/01_Study/08_qt/LANTransfer/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/LANTran
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qiodevicebase.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qiterable.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qiterator.h \
+  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsondocument.h \
+  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonobject.h \
+  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonparseerror.h \
+  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonvalue.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qlatin1stringview.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qlist.h \
+  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qlocale.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qlogging.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qmalloc.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qmap.h \
@@ -73,6 +87,7 @@ D:/01_Study/08_qt/LANTransfer/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/LANTran
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qpair.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qprocessordetection.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qrefcount.h \
+  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qregularexpression.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qscopedpointer.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qscopeguard.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qset.h \
@@ -117,7 +132,9 @@ D:/01_Study/08_qt/LANTransfer/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/LANTran
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtversionchecks.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtypeinfo.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtypes.h \
+  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qurl.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qutf8stringview.h \
+  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/quuid.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qvariant.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qvarlengtharray.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qversiontagging.h \

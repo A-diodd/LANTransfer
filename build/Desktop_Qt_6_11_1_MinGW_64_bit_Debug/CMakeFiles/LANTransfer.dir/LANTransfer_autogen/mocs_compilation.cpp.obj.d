@@ -401,6 +401,21 @@ CMakeFiles/LANTransfer.dir/LANTransfer_autogen/mocs_compilation.cpp.obj: \
  D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qabstractsocket.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qiodevice.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qhostaddress.h \
+ D:/01_Study/08_qt/LANTransfer/common/Protocol.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QByteArray \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QString \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QJsonObject \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonobject.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonvalue.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcborvalue.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcborcommon.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdatetime.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcalendar.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qlocale.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qregularexpression.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qurl.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/quuid.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsondocument.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonparseerror.h \
  D:\01_Study\08_qt\LANTransfer\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\LANTransfer_autogen\7EM65HM6UG/moc_TransferManager.cpp \
- D:/01_Study/08_qt/LANTransfer/client/TransferManager.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QString
+ D:/01_Study/08_qt/LANTransfer/client/TransferManager.h

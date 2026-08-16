@@ -4,7 +4,7 @@
 #include<QObject>
 #include<QTcpSocket>
 
-#include "Protocol.h"
+#include "../common/Protocol.h"
 
 class NetworkManager: public QObject
 {
@@ -17,8 +17,8 @@ class NetworkManager: public QObject
 		
 		void disconnectFromServer();
 		
-		void sendData(const QByteArray &data);
-		
+        void sendData( const QByteArray &data);
+
 		bool isConnected() const;
 	
 	signals:

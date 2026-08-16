@@ -94,11 +94,11 @@ void FileServer::handleMessage(
     }
 
 
-    case Protocol::MessageType::FileData:
+  /*  case Protocol::MessageType::FileData:
     {
         handleFileData(socket,payload);
         break;
-    }
+    }*/
 
 
     default:

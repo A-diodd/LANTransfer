@@ -358,4 +358,10 @@ CMakeFiles/LANTransfer.dir/common/Protocol.cpp.obj: \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qendian.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsondocument.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonparseerror.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QJsonDocument
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QJsonDocument \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QDataStream \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QIODevice \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qiodevice.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qspan.h \
+ D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cassert \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q20iterator.h

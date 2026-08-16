@@ -44,8 +44,11 @@ template <> constexpr inline auto TransferManager::qt_create_metaobjectdata<qt_m
         "message",
         "transferFailed",
         "onConnected",
-        "onDataReceived",
-        "data"
+        "onMessageReceived",
+        "Protocol::MessageType",
+        "type",
+        "QJsonObject",
+        "payload"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -59,9 +62,9 @@ template <> constexpr inline auto TransferManager::qt_create_metaobjectdata<qt_m
         }}),
         // Slot 'onConnected'
         QtMocHelpers::SlotData<void()>(5, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onDataReceived'
-        QtMocHelpers::SlotData<void(const QByteArray &)>(6, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::QByteArray, 7 },
+        // Slot 'onMessageReceived'
+        QtMocHelpers::SlotData<void(Protocol::MessageType, const QJsonObject &)>(6, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 7, 8 }, { 0x80000000 | 9, 10 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -89,7 +92,7 @@ void TransferManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         case 0: _t->logMessage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
         case 1: _t->transferFailed((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
         case 2: _t->onConnected(); break;
-        case 3: _t->onDataReceived((*reinterpret_cast<std::add_pointer_t<QByteArray>>(_a[1]))); break;
+        case 3: _t->onMessageReceived((*reinterpret_cast<std::add_pointer_t<Protocol::MessageType>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QJsonObject>>(_a[2]))); break;
         default: ;
         }
     }

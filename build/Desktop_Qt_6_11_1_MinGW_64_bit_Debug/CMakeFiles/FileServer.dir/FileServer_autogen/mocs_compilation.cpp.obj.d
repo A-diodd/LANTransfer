@@ -335,6 +335,43 @@ CMakeFiles/FileServer.dir/FileServer_autogen/mocs_compilation.cpp.obj: \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q20iterator.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qhostaddress.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qshareddata.h \
+ D:/01_Study/08_qt/LANTransfer/common/Protocol.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QByteArray \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QString \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QJsonObject \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonobject.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonvalue.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcborvalue.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcborcommon.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdatetime.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcalendar.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qlocale.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qvariant.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdebug.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtextstream.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcontiguouscache.h \
+ D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/climits \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qsharedpointer.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qsharedpointer_impl.h \
+ D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/set \
+ D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_set.h \
+ D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_multiset.h \
+ D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/unordered_set \
+ D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/unordered_set.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qmap.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qshareddata_impl.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qset.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qhash.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qvarlengtharray.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qalloc.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q23utility.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q20utility.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qregularexpression.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qurl.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/quuid.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qendian.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsondocument.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonparseerror.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtmochelpers.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtmocconstants.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q20algorithm.h

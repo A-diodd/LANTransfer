@@ -196,12 +196,25 @@ void MainWindow::setupConnections()
             });
 
     connect(networkManager,
-            &NetworkManager::dataReceived,
+            &NetworkManager::messageReceived,
             this,
-            [this](const QByteArray &data)
+            [this](Protocol::MessageType type,
+                   const QJsonObject &payload)
             {
-                logEdit->append(
-                    "[RECV]"+data);
+
+                if(type == Protocol::MessageType::HelloAck)
+                {
+                    logEdit->append(
+                        "[RECV] HelloAck");
+                }
+
+
+                if(type == Protocol::MessageType::FileAccept)
+                {
+                    logEdit->append(
+                        "[RECV] File accepted");
+                }
+
             });
 
     connect(transferManager,
