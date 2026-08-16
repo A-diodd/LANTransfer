@@ -1,0 +1,105 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "LANTransfer",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "FileServer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FileServer-Debug-fbf94824d5aaffcbb58c.json",
+					"name" : "FileServer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FileServer_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FileServer_autogen-Debug-502aa309c0961fe1df60.json",
+					"name" : "FileServer_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FileServer_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FileServer_autogen_timestamp_deps-Debug-a18b6d795aa813a78602.json",
+					"name" : "FileServer_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LANTransfer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LANTransfer-Debug-5daa83c2625605f4ff37.json",
+					"name" : "LANTransfer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LANTransfer_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LANTransfer_autogen-Debug-d575ffac380d10e6c609.json",
+					"name" : "LANTransfer_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LANTransfer_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LANTransfer_autogen_timestamp_deps-Debug-ecbb1770d05a5ee742c4.json",
+					"name" : "LANTransfer_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "D:/01_Study/08_qt/LANTransfer/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug",
+		"source" : "D:/01_Study/08_qt/LANTransfer"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}

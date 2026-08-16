@@ -1,0 +1,6 @@
+set(__QT_DEPLOY_TARGET_LANTransfer_FILE D:/01_Study/08_qt/LANTransfer/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/LANTransfer.exe)
+set(__QT_DEPLOY_TARGET_LANTransfer_TYPE EXECUTABLE)
+set(__QT_DEPLOY_TARGET_LANTransfer_RUNTIME_DLLS D:/02_app/qt/6.11.1/mingw_64/bin/Qt6Widgets.dll;D:/02_app/qt/6.11.1/mingw_64/bin/Qt6Network.dll;D:/02_app/qt/6.11.1/mingw_64/bin/Qt6Gui.dll;D:/02_app/qt/6.11.1/mingw_64/bin/Qt6Core.dll)
+set(__QT_DEPLOY_TARGET_FileServer_FILE D:/01_Study/08_qt/LANTransfer/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/FileServer.exe)
+set(__QT_DEPLOY_TARGET_FileServer_TYPE EXECUTABLE)
+set(__QT_DEPLOY_TARGET_FileServer_RUNTIME_DLLS D:/02_app/qt/6.11.1/mingw_64/bin/Qt6Network.dll;D:/02_app/qt/6.11.1/mingw_64/bin/Qt6Core.dll)
