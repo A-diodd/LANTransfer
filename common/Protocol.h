@@ -9,7 +9,7 @@ namespace Protocol
 {
 	enum class MessageType
 	{
-		Hello,
+		Hello =1,
 		HelloAck,
 		FileInfo,
 		FileAccept,

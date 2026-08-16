@@ -39,80 +39,149 @@ void FileServer::onNewConnection()
 }
 
 
+
 void FileServer::onReadyRead()
 {
-	auto *socket=
-		qobject_cast<QTcpSocket *>(sender());
-	
-	if(!socket)
-		return;
-	
-	QByteArray data=
-		socket->readAll();
-	
-	qDebug()<<"Received"
-			<<data;
-	
-	QJsonParseError error;
-	
-	QJsonDocument document=
-		QJsonDocument::fromJson(
-			data,
-			&error);
-	
-	if(error.error !=QJsonParseError::NoError)
-	{
-		qDebug() <<"Invalid JSON";
-		return;
-	}
-	
-	QJsonObject object =document.object();
-	
-	QString type =object["type"].toString();
-	
-	if(type=="hello")
-	{
-		QJsonObject payload;
-		payload["device"]="FileServer";
-		QByteArray response=
-			Protocol::buildMessage(
-				Protocol::MessageType::HelloAck,
-				payload);    
-		
-		qDebug() << "Response:" << response;
 
-        qint64 bytes = socket->write(response);
+auto *socket =
+qobject_cast<QTcpSocket*>(sender());
 
-        qDebug() << "write bytes:" << bytes;
-        qDebug() << "bytesToWrite:" << socket->bytesToWrite();
-	}
-	else if (type == "file_info")
-	{
-		QString fileName =
-			object["file_name"].toString();
 
-		QString fileSize =
-			object["file_size"].toString();
+buffer.append(socket->readAll());
 
-		qDebug()
-			<< "Incoming file:"
-			<< fileName;
 
-		qDebug()
-			<< "File size:"
-			<< fileSize;
+Protocol::MessageType type;
 
-		QJsonObject payload;
+QJsonObject payload;
 
-		payload["result"] = "accepted";
 
-		QByteArray response =
-			Protocol::buildMessage(
-				Protocol::MessageType::FileAccept,
-				payload);
+while(Protocol::parseMessage(
+      buffer,
+      type,
+      payload))
+{
 
-		socket->write(response);
-	}
-	
-	 
- } 
+    handleMessage(
+        socket,
+        type,
+        payload);
+
+}
+
+}
+
+
+void FileServer::handleMessage(
+    QTcpSocket *socket,
+    Protocol::MessageType type,
+    const QJsonObject &payload)
+{
+
+    switch(type)
+    {
+
+    case Protocol::MessageType::Hello:
+    {
+        handleHello(socket,payload);
+        break;
+    }
+
+
+    case Protocol::MessageType::FileInfo:
+    {
+        handleFileInfo(socket,payload);
+        break;
+    }
+
+
+    case Protocol::MessageType::FileData:
+    {
+        handleFileData(socket,payload);
+        break;
+    }
+
+
+    default:
+        break;
+
+    }
+
+}
+
+void FileServer::handleHello(
+    QTcpSocket *socket,
+    const QJsonObject &payload)
+{
+
+
+    Q_UNUSED(payload);
+
+
+
+    QJsonObject response;
+
+
+    response["device"]
+        ="FileServer";
+
+
+
+    socket->write(
+
+        Protocol::buildMessage(
+            Protocol::MessageType::HelloAck,
+            response)
+
+    );
+
+
+}
+
+void FileServer::handleFileInfo(
+    QTcpSocket *socket,
+    const QJsonObject &payload)
+{
+
+
+    QString name =
+        payload["file_name"]
+        .toString();
+
+
+
+    QString size =
+        payload["file_size"]
+        .toString();
+
+
+
+    qDebug()
+        <<"Receive file:"
+        <<name;
+
+
+
+    qDebug()
+        <<"Size:"
+        <<size;
+
+
+
+    QJsonObject response;
+
+
+    response["result"]
+        ="accepted";
+
+
+
+    socket->write(
+
+        Protocol::buildMessage(
+            Protocol::MessageType::FileAccept,
+            response)
+
+    );
+
+
+}

@@ -3,6 +3,8 @@
 
 #include <QObject>
 #include <QTcpServer>
+#include "../common/Protocol.h"
+#include <QJsonObject>
 
 class FileServer : public QObject
 {
@@ -18,7 +20,26 @@ private slots:
     void onReadyRead();
 
 private:
+
+
+    void handleMessage(
+        QTcpSocket *socket,
+        Protocol::MessageType type,
+        const QJsonObject &payload);
+
+    void handleHello(
+        QTcpSocket *socket,
+        const QJsonObject &payload);
+
+    void handleFileInfo(
+        QTcpSocket *socket,
+        const QJsonObject &payload);
+
+private:
+
     QTcpServer *server;
+
+    QByteArray buffer;
 };
 
 #endif // FILESERVER_H
