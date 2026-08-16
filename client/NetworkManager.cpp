@@ -54,12 +54,12 @@ bool NetworkManager::isConnected() const
 void NetworkManager::onConnected()
 {
 	QJsonObject payload;
-/*	payload["device"]="LANTransfer";
+	payload["device"]="LANTransfer";
 	QByteArray message=
         Protocol::buildMessage(
             Protocol::MessageType::Hello,
 			payload);
-    sendData(message);*/
+    sendData(message);
     emit connected();
 }
 
@@ -70,13 +70,30 @@ void NetworkManager::onDisconnected()
 
 void NetworkManager::onReadyRead()
 {
-    qDebug() << "Client readyRead triggered!";
 
-    QByteArray data = socket->readAll();
+    buffer.append(
+        socket->readAll());
 
-    qDebug() << "Client received:" << data;
 
-    emit dataReceived(data);
+    Protocol::MessageType type;
+
+    QJsonObject payload;
+
+
+    while(
+        Protocol::parseMessage(
+            buffer,
+            type,
+            payload))
+    {
+
+
+        emit messageReceived(
+            type,
+            payload);
+
+    }
+
 }
 
 void NetworkManager::onErrorOccurred(QAbstractSocket::SocketError socketError)

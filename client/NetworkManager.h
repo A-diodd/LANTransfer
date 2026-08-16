@@ -4,6 +4,7 @@
 #include<QObject>
 #include<QTcpSocket>
 
+#include "Protocol.h"
 
 class NetworkManager: public QObject
 {
@@ -23,8 +24,8 @@ class NetworkManager: public QObject
 	signals:
 		void connected();
 		void disconnected();
-		void dataReceived(const QByteArray &data);
 		void errorOccurred(const QString &message);
+		void messageReceived(Protocol::MessageType type,const QJsonObject &payload);
 	
 
         //槽函数
@@ -36,5 +37,6 @@ class NetworkManager: public QObject
 		
 	private:
 		QTcpSocket *socket;
+		QByteArray buffer;
 } ;
 #endif

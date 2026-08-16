@@ -19,9 +19,10 @@ TransferManager::TransferManager(
 			&TransferManager::onConnected);
 			
 	connect(networkManager,
-			&NetworkManager::dataReceived,
+			&NetworkManager::messageReceived,
 			this,
-			&TransferManager::onDataReceived);
+			&TransferManager::onMessageReceived);
+		
 }
 
 void TransferManager::startTransfer(
@@ -67,25 +68,20 @@ void TransferManager::onConnected()
 	emit logMessage("[INFO] FileInfo sent.");
 }
 
-void TransferManager::onDataReceived(
-	const QByteArray &data)
-{
-	Protocol::MessageType type;
-	QJsonObject payload;
-	
-    if(!Protocol::parseMessage(
-			data,
-			type,
-			payload))
-	{
-		emit transferFailed(
-			"Invalid server response.");
 
-        return ;
-	}
-	if(type==Protocol::MessageType::FileAccept)
-	{
-		emit logMessage(
-			"[INFO] Server accepted file.");
-	 } 
+
+void TransferManager::onMessageReceived(
+    Protocol::MessageType type,
+    const QJsonObject &payload)
+{
+
+    if(type ==
+       Protocol::MessageType::FileAccept)
+    {
+
+        emit logMessage(
+            "[INFO] Server accepted file.");
+
+    }
+
 }

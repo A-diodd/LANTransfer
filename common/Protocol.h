@@ -27,6 +27,6 @@ namespace Protocol
 	
 	QByteArray buildMessage(MessageType type,const QJsonObject &payload);
 
-	bool parseMessage(const QByteArray &data,MessageType &type,QJsonObject &payload);
+	bool parseMessage( QByteArray &buffer,MessageType &type,QJsonObject &payload);
 }
 #endif // PROTOCOL_H
