@@ -199,7 +199,7 @@ void MainWindow::setupConnections()
             &NetworkManager::messageReceived,
             this,
             [this](Protocol::MessageType type,
-                   const QJsonObject &payload)
+                   const QByteArray &payload)
             {
 
                 if(type == Protocol::MessageType::HelloAck)

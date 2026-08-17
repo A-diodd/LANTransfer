@@ -25,15 +25,15 @@ private:
     void handleMessage(
         QTcpSocket *socket,
         Protocol::MessageType type,
-        const QJsonObject &payload);
-
+        const QByteArray &payload);
+    
     void handleHello(
         QTcpSocket *socket,
-        const QJsonObject &payload);
+        const QByteArray &payload);
 
     void handleFileInfo(
         QTcpSocket *socket,
-        const QJsonObject &payload);
+        const QByteArray &payload);
 
 private:
 

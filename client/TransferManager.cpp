@@ -50,38 +50,56 @@ void TransferManager::startTransfer(
 
 void TransferManager::onConnected()
 {
-	QFileInfo fileInfo(currentFilePath);
-	
-	QJsonObject payload;
-	
-	payload["file_name"] =fileInfo.fileName();
-	
-	payload["file_size"] =QString::number(fileInfo.size());
-	
-	QByteArray message=
-		Protocol::buildMessage(
-			Protocol::MessageType::FileInfo,
-			payload);
-	
-	networkManager->sendData(message);
-	
-	emit logMessage("[INFO] FileInfo sent.");
-}
+    QFileInfo fileInfo(currentFilePath);
 
+    QJsonObject payload;
+
+    payload["file_name"] =
+        fileInfo.fileName();
+
+    payload["file_size"] =
+        QString::number(fileInfo.size());
+
+    QJsonDocument document(payload);
+
+    QByteArray json =
+        document.toJson(
+            QJsonDocument::Compact);
+
+    QByteArray message =
+        Protocol::buildMessage(
+            Protocol::MessageType::FileInfo,
+            json);
+
+    networkManager->sendData(message);
+
+    emit logMessage(
+        "[INFO] FileInfo sent.");
+}
 
 
 void TransferManager::onMessageReceived(
     Protocol::MessageType type,
-    const QJsonObject &payload)
+    const QByteArray &payload)
 {
-
-    if(type ==
-       Protocol::MessageType::FileAccept)
+    if (type ==
+        Protocol::MessageType::HelloAck)
     {
+        emit logMessage(
+            "[INFO] HelloAck received.");
 
+        return;
+    }
+
+    if (type ==
+        Protocol::MessageType::FileAccept)
+    {
         emit logMessage(
             "[INFO] Server accepted file.");
 
+        // 下一步：
+        // 开始发送文件
+        return;
     }
-
 }
+

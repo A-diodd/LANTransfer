@@ -53,8 +53,7 @@ bool NetworkManager::isConnected() const
 
 void NetworkManager::onConnected()
 {
-	QJsonObject payload;
-	payload["device"]="LANTransfer";
+    QByteArray payload;
 	QByteArray message=
         Protocol::buildMessage(
             Protocol::MessageType::Hello,
@@ -77,7 +76,7 @@ void NetworkManager::onReadyRead()
 
     Protocol::MessageType type;
 
-    QJsonObject payload;
+    QByteArray payload;
 
 
     while(

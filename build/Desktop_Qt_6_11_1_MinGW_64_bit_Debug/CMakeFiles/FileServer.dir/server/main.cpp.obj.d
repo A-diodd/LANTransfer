@@ -343,7 +343,18 @@ CMakeFiles/FileServer.dir/server/main.cpp.obj: \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q20iterator.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qhostaddress.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qshareddata.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QDebug \
+ D:/01_Study/08_qt/LANTransfer/common/Protocol.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QByteArray \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QString \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QJsonObject \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonobject.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonvalue.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcborvalue.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcborcommon.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdatetime.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcalendar.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qlocale.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qvariant.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdebug.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtextstream.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcontiguouscache.h \
@@ -360,4 +371,13 @@ CMakeFiles/FileServer.dir/server/main.cpp.obj: \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qset.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qhash.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qvarlengtharray.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qalloc.h
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qalloc.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q23utility.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q20utility.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qregularexpression.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qurl.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/quuid.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qendian.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsondocument.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonparseerror.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QDebug

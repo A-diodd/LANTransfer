@@ -25,7 +25,9 @@ class NetworkManager: public QObject
 		void connected();
 		void disconnected();
 		void errorOccurred(const QString &message);
-		void messageReceived(Protocol::MessageType type,const QJsonObject &payload);
+		void messageReceived(
+			Protocol::MessageType type,
+			const QByteArray &payload);
 	
 
         //槽函数

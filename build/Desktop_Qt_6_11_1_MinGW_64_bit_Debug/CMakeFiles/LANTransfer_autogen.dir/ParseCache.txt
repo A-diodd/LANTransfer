@@ -742,6 +742,7 @@ D:/01_Study/08_qt/LANTransfer/client/NetworkManager.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h
+D:/01_Study/08_qt/LANTransfer/common/Protocol.h
 D:/01_Study/08_qt/LANTransfer/client/TransferManager.h
  mmc:Q_OBJECT
  mdp:D:/01_Study/08_qt/LANTransfer/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/LANTransfer_autogen/moc_predefs.h
@@ -1095,9 +1096,8 @@ D:/01_Study/08_qt/LANTransfer/client/TransferManager.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h
-D:/01_Study/08_qt/LANTransfer/common/Protocol.h
-D:/01_Study/08_qt/LANTransfer/client/MainWindow.cpp
 D:/01_Study/08_qt/LANTransfer/client/main.cpp
+D:/01_Study/08_qt/LANTransfer/client/MainWindow.cpp
 D:/01_Study/08_qt/LANTransfer/client/NetworkManager.cpp
 D:/01_Study/08_qt/LANTransfer/client/TransferManager.cpp
 D:/01_Study/08_qt/LANTransfer/common/Protocol.cpp

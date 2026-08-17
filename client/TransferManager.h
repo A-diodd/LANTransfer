@@ -21,7 +21,9 @@ public:
 
 private slots:
     void onConnected();
-    void onMessageReceived(Protocol::MessageType type,const QJsonObject &payload);
+    void onMessageReceived(
+        Protocol::MessageType type,
+        const QByteArray &payload);
 
 signals:
     void logMessage(const QString &message);

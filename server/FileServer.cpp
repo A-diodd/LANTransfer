@@ -52,7 +52,7 @@ buffer.append(socket->readAll());
 
 Protocol::MessageType type;
 
-QJsonObject payload;
+QByteArray payload;
 
 
 while(Protocol::parseMessage(
@@ -74,7 +74,7 @@ while(Protocol::parseMessage(
 void FileServer::handleMessage(
     QTcpSocket *socket,
     Protocol::MessageType type,
-    const QJsonObject &payload)
+    const QByteArray &payload)
 {
 
     switch(type)
@@ -110,7 +110,7 @@ void FileServer::handleMessage(
 
 void FileServer::handleHello(
     QTcpSocket *socket,
-    const QJsonObject &payload)
+    const QByteArray &payload)
 {
 
 
@@ -118,11 +118,8 @@ void FileServer::handleHello(
 
 
 
-    QJsonObject response;
+    QByteArray response;
 
-
-    response["device"]
-        ="FileServer";
 
 
 
@@ -139,49 +136,57 @@ void FileServer::handleHello(
 
 void FileServer::handleFileInfo(
     QTcpSocket *socket,
-    const QJsonObject &payload)
+    const QByteArray &payload)
 {
+    QJsonParseError error;
 
+    QJsonDocument document =
+        QJsonDocument::fromJson(
+            payload,
+            &error);
+
+    if (error.error !=
+        QJsonParseError::NoError)
+    {
+        qDebug()
+            << "Invalid FileInfo JSON";
+
+        return;
+    }
+
+    QJsonObject object =
+        document.object();
 
     QString name =
-        payload["file_name"]
-        .toString();
+        object["file_name"].toString();
 
-
-
-    QString size =
-        payload["file_size"]
-        .toString();
-
-
+    qint64 size =
+        object["file_size"]
+            .toString()
+            .toLongLong();
 
     qDebug()
-        <<"Receive file:"
-        <<name;
-
-
+        << "Receive file:"
+        << name;
 
     qDebug()
-        <<"Size:"
-        <<size;
-
-
+        << "Size:"
+        << size;
 
     QJsonObject response;
 
+    response["result"] =
+        "accepted";
 
-    response["result"]
-        ="accepted";
+    QJsonDocument responseDocument(
+        response);
 
-
+    QByteArray json =
+        responseDocument.toJson(
+            QJsonDocument::Compact);
 
     socket->write(
-
         Protocol::buildMessage(
             Protocol::MessageType::FileAccept,
-            response)
-
-    );
-
-
+            json));
 }
