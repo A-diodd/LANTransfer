@@ -5,6 +5,8 @@
 #include <QTcpServer>
 #include "../common/Protocol.h"
 #include <QJsonObject>
+#include <QFile>
+#include <QString>
 
 class FileServer : public QObject
 {
@@ -35,11 +37,25 @@ private:
         QTcpSocket *socket,
         const QByteArray &payload);
 
+    void handleFileData(
+        QTcpSocket *socket,
+        const QByteArray &payload);
+
+    void handleFileFinish(
+        QTcpSocket *socket,
+        const QByteArray &payload);
+
 private:
 
     QTcpServer *server;
 
     QByteArray buffer;
+
+    QFile receiveFile;
+
+    qint64 expectedSize = 0;
+
+    qint64 receivedSize = 0;
 };
 
 #endif // FILESERVER_H

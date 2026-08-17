@@ -25,6 +25,7 @@ class NetworkManager: public QObject
 		void connected();
 		void disconnected();
 		void errorOccurred(const QString &message);
+		void bytesWritten(qint64 bytes);
 		void messageReceived(
 			Protocol::MessageType type,
 			const QByteArray &payload);
@@ -36,6 +37,7 @@ class NetworkManager: public QObject
 		void onDisconnected();
 		void onReadyRead();
         void onErrorOccurred(QAbstractSocket::SocketError socketError);
+		void onBytesWritten(qint64 bytes);
 		
 	private:
 		QTcpSocket *socket;

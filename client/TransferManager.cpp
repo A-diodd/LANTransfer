@@ -22,6 +22,11 @@ TransferManager::TransferManager(
 			&NetworkManager::messageReceived,
 			this,
 			&TransferManager::onMessageReceived);
+	connect(networkManager,
+            &NetworkManager::bytesWritten,
+            this,
+            &TransferManager::onBytesWritten);
+
 		
 }
 
@@ -39,6 +44,8 @@ void TransferManager::startTransfer(
 	}
 	
 	currentFilePath =filePath;
+    fileSize = fileInfo.size();
+    sentBytes = 0;
 	emit logMessage(
 		"[INFO] Preparing file:"
 		+ fileInfo.fileName());
@@ -77,7 +84,7 @@ void TransferManager::onConnected()
         "[INFO] FileInfo sent.");
 }
 
-
+//服务端收到回应的时候开始处理。。。
 void TransferManager::onMessageReceived(
     Protocol::MessageType type,
     const QByteArray &payload)
@@ -96,10 +103,73 @@ void TransferManager::onMessageReceived(
     {
         emit logMessage(
             "[INFO] Server accepted file.");
+        
+		sendFile.setFileName(currentFilePath);
+		
+		if(!sendFile.open(QIODevice::ReadOnly))
+		{
+			emit transferFailed(
+				"Failed to open file.");
+			return;	
+		}   
+		fileSize=sendFile.size();
+		sentBytes=0;
+		emit logMessage("[INFO] Start sending file...");
+		sendNextChunk();
 
-        // 下一步：
-        // 开始发送文件
         return;
     }
 }
 
+void TransferManager::sendNextChunk()
+{
+	if(!sendFile.isOpen())
+		return;
+	
+    if(sentBytes>=fileSize)
+	{
+		sendFile.close();
+		emit logMessage(
+            "[INFO] File data sent.");
+		return;
+		
+	}
+	QByteArray chunk=sendFile.read(ChunkSize);
+	
+	if(chunk.isEmpty())
+	{
+		if(sendFile.atEnd())
+		{
+			sendFile.close();
+			emit logMessage(
+				"[INFO] File data sent.");
+		}
+		return;
+	}
+	QByteArray message=
+		Protocol::buildMessage(
+            Protocol::MessageType::FileData,
+			chunk);
+	networkManager->sendData(message);
+    sentBytes+=chunk.size();
+	emit progressChanged(
+		sentBytes,
+		fileSize);
+	
+	waitingForWrite =true;
+}
+
+void TransferManager::onBytesWritten(
+	qint64 bytes)
+{
+	Q_UNUSED(bytes);
+	
+	if(!waitingForWrite)
+		return;
+	
+	if(networkManager->isConnected())
+	{
+		waitingForWrite=false;
+		sendNextChunk();
+	}
+}

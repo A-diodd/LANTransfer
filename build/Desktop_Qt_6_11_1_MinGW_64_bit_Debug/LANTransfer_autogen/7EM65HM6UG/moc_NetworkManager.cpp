@@ -44,6 +44,8 @@ template <> constexpr inline auto NetworkManager::qt_create_metaobjectdata<qt_me
         "disconnected",
         "errorOccurred",
         "message",
+        "bytesWritten",
+        "bytes",
         "messageReceived",
         "Protocol::MessageType",
         "type",
@@ -53,7 +55,8 @@ template <> constexpr inline auto NetworkManager::qt_create_metaobjectdata<qt_me
         "onReadyRead",
         "onErrorOccurred",
         "QAbstractSocket::SocketError",
-        "socketError"
+        "socketError",
+        "onBytesWritten"
     };
 
     QtMocHelpers::UintData qt_methods {
@@ -65,19 +68,27 @@ template <> constexpr inline auto NetworkManager::qt_create_metaobjectdata<qt_me
         QtMocHelpers::SignalData<void(const QString &)>(4, 2, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::QString, 5 },
         }}),
+        // Signal 'bytesWritten'
+        QtMocHelpers::SignalData<void(qint64)>(6, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { QMetaType::LongLong, 7 },
+        }}),
         // Signal 'messageReceived'
-        QtMocHelpers::SignalData<void(Protocol::MessageType, const QByteArray &)>(6, 2, QMC::AccessPublic, QMetaType::Void, {{
-            { 0x80000000 | 7, 8 }, { QMetaType::QByteArray, 9 },
+        QtMocHelpers::SignalData<void(Protocol::MessageType, const QByteArray &)>(8, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { 0x80000000 | 9, 10 }, { QMetaType::QByteArray, 11 },
         }}),
         // Slot 'onConnected'
-        QtMocHelpers::SlotData<void()>(10, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onDisconnected'
-        QtMocHelpers::SlotData<void()>(11, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onReadyRead'
         QtMocHelpers::SlotData<void()>(12, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onDisconnected'
+        QtMocHelpers::SlotData<void()>(13, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onReadyRead'
+        QtMocHelpers::SlotData<void()>(14, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'onErrorOccurred'
-        QtMocHelpers::SlotData<void(QAbstractSocket::SocketError)>(13, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { 0x80000000 | 14, 15 },
+        QtMocHelpers::SlotData<void(QAbstractSocket::SocketError)>(15, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 16, 17 },
+        }}),
+        // Slot 'onBytesWritten'
+        QtMocHelpers::SlotData<void(qint64)>(18, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::LongLong, 7 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -105,18 +116,20 @@ void NetworkManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         case 0: _t->connected(); break;
         case 1: _t->disconnected(); break;
         case 2: _t->errorOccurred((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
-        case 3: _t->messageReceived((*reinterpret_cast<std::add_pointer_t<Protocol::MessageType>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QByteArray>>(_a[2]))); break;
-        case 4: _t->onConnected(); break;
-        case 5: _t->onDisconnected(); break;
-        case 6: _t->onReadyRead(); break;
-        case 7: _t->onErrorOccurred((*reinterpret_cast<std::add_pointer_t<QAbstractSocket::SocketError>>(_a[1]))); break;
+        case 3: _t->bytesWritten((*reinterpret_cast<std::add_pointer_t<qint64>>(_a[1]))); break;
+        case 4: _t->messageReceived((*reinterpret_cast<std::add_pointer_t<Protocol::MessageType>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QByteArray>>(_a[2]))); break;
+        case 5: _t->onConnected(); break;
+        case 6: _t->onDisconnected(); break;
+        case 7: _t->onReadyRead(); break;
+        case 8: _t->onErrorOccurred((*reinterpret_cast<std::add_pointer_t<QAbstractSocket::SocketError>>(_a[1]))); break;
+        case 9: _t->onBytesWritten((*reinterpret_cast<std::add_pointer_t<qint64>>(_a[1]))); break;
         default: ;
         }
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
         switch (_id) {
         default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
-        case 7:
+        case 8:
             switch (*reinterpret_cast<int*>(_a[1])) {
             default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
             case 0:
@@ -132,7 +145,9 @@ void NetworkManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
             return;
         if (QtMocHelpers::indexOfMethod<void (NetworkManager::*)(const QString & )>(_a, &NetworkManager::errorOccurred, 2))
             return;
-        if (QtMocHelpers::indexOfMethod<void (NetworkManager::*)(Protocol::MessageType , const QByteArray & )>(_a, &NetworkManager::messageReceived, 3))
+        if (QtMocHelpers::indexOfMethod<void (NetworkManager::*)(qint64 )>(_a, &NetworkManager::bytesWritten, 3))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (NetworkManager::*)(Protocol::MessageType , const QByteArray & )>(_a, &NetworkManager::messageReceived, 4))
             return;
     }
 }
@@ -156,14 +171,14 @@ int NetworkManager::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 8)
+        if (_id < 10)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 10;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 8)
+        if (_id < 10)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 8;
+        _id -= 10;
     }
     return _id;
 }
@@ -187,8 +202,14 @@ void NetworkManager::errorOccurred(const QString & _t1)
 }
 
 // SIGNAL 3
+void NetworkManager::bytesWritten(qint64 _t1)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 3, nullptr, _t1);
+}
+
+// SIGNAL 4
 void NetworkManager::messageReceived(Protocol::MessageType _t1, const QByteArray & _t2)
 {
-    QMetaObject::activate<void>(this, &staticMetaObject, 3, nullptr, _t1, _t2);
+    QMetaObject::activate<void>(this, &staticMetaObject, 4, nullptr, _t1, _t2);
 }
 QT_WARNING_POP

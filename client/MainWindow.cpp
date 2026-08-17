@@ -233,6 +233,28 @@ void MainWindow::setupConnections()
                 logEdit->append(
                     "[ERROR] " + message);
             });
+            
+    connect(
+        transferManager,
+        &TransferManager::progressChanged,
+        this,
+        [this](qint64 sent, qint64 total)
+        {
+            if (total <= 0)
+                return;
+
+            int percent =
+                static_cast<int>(
+                    sent * 100 / total);
+
+            progressBar->setValue(percent);
+
+            transferInfoLabel->setText(
+                QString::number(sent)
+                + " / "
+                + QString::number(total)
+                + " Bytes");
+        });
                 
 }
 

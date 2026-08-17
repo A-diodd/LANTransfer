@@ -5,6 +5,7 @@
 
 #include <QJsonDocument>
 #include <QJsonObject>
+#include <QFileInfo>
 
 FileServer::FileServer(QObject *parent)
 	: QObject(parent),
@@ -160,18 +161,37 @@ void FileServer::handleFileInfo(
     QString name =
         object["file_name"].toString();
 
-    qint64 size =
+    expectedSize =
         object["file_size"]
             .toString()
             .toLongLong();
+    
+    receivedSize=0;
+    
+    QFileInfo fileInfo(name);
+    
+    QString safeName =
+        fileInfo.fileName();
+
+    receiveFile.setFileName(
+        "received_" + safeName);
+
+    if (!receiveFile.open(
+            QIODevice::WriteOnly))
+    {
+        qDebug()
+            << "Failed to open output file.";
+
+        return;
+    }
 
     qDebug()
         << "Receive file:"
-        << name;
+        << safeName;
 
     qDebug()
         << "Size:"
-        << size;
+        << expectedSize;
 
     QJsonObject response;
 
@@ -189,4 +209,41 @@ void FileServer::handleFileInfo(
         Protocol::buildMessage(
             Protocol::MessageType::FileAccept,
             json));
+}
+
+void FileServer::handleFileData(
+    QTcpSocket *socket,
+    const QByteArray &payload)
+{
+    Q_UNUSED(socket);
+
+    if (!receiveFile.isOpen())
+        return;
+
+    qint64 written =
+        receiveFile.write(payload);
+
+    if (written != payload.size())
+    {
+        qDebug()
+            << "Failed to write file.";
+
+        return;
+    }
+
+    receivedSize += written;
+
+    qDebug()
+        << "Received:"
+        << receivedSize
+        << "/"
+        << expectedSize;
+
+    if (receivedSize >= expectedSize)
+    {
+        receiveFile.close();
+
+        qDebug()
+            << "File received completely.";
+    }
 }

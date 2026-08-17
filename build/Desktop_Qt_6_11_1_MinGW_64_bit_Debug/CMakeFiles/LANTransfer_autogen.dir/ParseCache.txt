@@ -742,19 +742,20 @@ D:/01_Study/08_qt/LANTransfer/client/NetworkManager.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h
-D:/01_Study/08_qt/LANTransfer/common/Protocol.h
 D:/01_Study/08_qt/LANTransfer/client/TransferManager.h
  mmc:Q_OBJECT
  mdp:D:/01_Study/08_qt/LANTransfer/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/LANTransfer_autogen/moc_predefs.h
  mdp:D:/01_Study/08_qt/LANTransfer/client/TransferManager.h
  mdp:D:/01_Study/08_qt/LANTransfer/common/Protocol.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QByteArray
+ mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QFile
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QJsonObject
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QObject
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QString
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q17memory.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q20bit.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q20functional.h
+ mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q20iterator.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q20memory.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q20type_traits.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q20utility.h
@@ -795,6 +796,8 @@ D:/01_Study/08_qt/LANTransfer/client/TransferManager.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdebug.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qendian.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qexceptionhandling.h
+ mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfile.h
+ mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfiledevice.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qflags.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfloat16.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qforeach.h
@@ -805,6 +808,7 @@ D:/01_Study/08_qt/LANTransfer/client/TransferManager.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qglobalstatic.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qhash.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qhashfunctions.h
+ mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qiodevice.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qiodevicebase.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qiterable.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qiterator.h
@@ -840,6 +844,7 @@ D:/01_Study/08_qt/LANTransfer/client/TransferManager.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qshareddata_impl.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qsharedpointer.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qsharedpointer_impl.h
+ mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qspan.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qstdlibdetection.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qstring.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qstringalgorithms.h
@@ -897,11 +902,14 @@ D:/01_Study/08_qt/LANTransfer/client/TransferManager.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/allocator.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/atomic_base.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/atomic_lockfree_defines.h
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_ios.h
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_ios.tcc
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/basic_string.tcc
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/char_traits.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/charconv.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/chrono.h
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/codecvt.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/concept_check.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cpp_type_traits.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/cxxabi_forced.h
@@ -911,6 +919,10 @@ D:/01_Study/08_qt/LANTransfer/client/TransferManager.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_defines.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/exception_ptr.h
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_dir.h
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_fwd.h
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_path.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/functexcept.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/functional_hash.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hash_bytes.h
@@ -918,9 +930,15 @@ D:/01_Study/08_qt/LANTransfer/client/TransferManager.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/hashtable_policy.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/invoke.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ios_base.h
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/istream.tcc
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/list.tcc
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_classes.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_classes.tcc
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_conv.h
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets.h
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets.tcc
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets_nonio.h
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/locale_facets_nonio.tcc
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/localefwd.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memory_resource.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/memoryfwd.h
@@ -928,11 +946,13 @@ D:/01_Study/08_qt/LANTransfer/client/TransferManager.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/nested_exception.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/new_allocator.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/node_handle.h
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream.tcc
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ostream_insert.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/parse_numbers.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/postypes.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/predefined_ops.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/ptr_traits.h
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/quoted_string.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/range_access.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/refwrap.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/requires_hosted.h
@@ -940,6 +960,7 @@ D:/01_Study/08_qt/LANTransfer/client/TransferManager.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr_atomic.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/shared_ptr_base.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/specfun.h
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/sstream.tcc
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_abs.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/std_function.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/stl_algo.h
@@ -977,12 +998,14 @@ D:/01_Study/08_qt/LANTransfer/client/TransferManager.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/uses_allocator_args.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/utility.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/vector.tcc
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cassert
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cctype
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cerrno
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/chrono
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/climits
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/clocale
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cmath
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/codecvt
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/compare
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstddef
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstdint
@@ -991,6 +1014,7 @@ D:/01_Study/08_qt/LANTransfer/client/TransferManager.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cstring
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ctime
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cwchar
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/cwctype
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/debug/assertions.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/debug/debug.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/exception
@@ -1001,17 +1025,23 @@ D:/01_Study/08_qt/LANTransfer/client/TransferManager.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/numeric_traits.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/string_conversions.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ext/type_traits.h
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/filesystem
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/functional
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/initializer_list
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iomanip
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ios
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iosfwd
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/istream
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/iterator
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/limits
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/list
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/locale
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/map
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/memory
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/new
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/numeric
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/optional
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ostream
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/execution_defs.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_algorithm_defs.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/glue_memory_defs.h
@@ -1019,6 +1049,7 @@ D:/01_Study/08_qt/LANTransfer/client/TransferManager.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/pstl/pstl_config.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/set
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/sstream
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/stdexcept
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/stdlib.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/streambuf
@@ -1051,10 +1082,14 @@ D:/01_Study/08_qt/LANTransfer/client/TransferManager.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++config.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/c++locale.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/cpu_defines.h
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_base.h
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/ctype_inline.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/error_constants.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr-default.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/gthr.h
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/messages_members.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/os_defines.h
+ mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/x86_64-w64-mingw32/bits/time_members.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/limits.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdarg.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/stdbool.h
@@ -1096,8 +1131,10 @@ D:/01_Study/08_qt/LANTransfer/client/TransferManager.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h
-D:/01_Study/08_qt/LANTransfer/client/main.cpp
+ mdp:D:/02_app/qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h
+D:/01_Study/08_qt/LANTransfer/common/Protocol.h
 D:/01_Study/08_qt/LANTransfer/client/MainWindow.cpp
+D:/01_Study/08_qt/LANTransfer/client/main.cpp
 D:/01_Study/08_qt/LANTransfer/client/NetworkManager.cpp
 D:/01_Study/08_qt/LANTransfer/client/TransferManager.cpp
 D:/01_Study/08_qt/LANTransfer/common/Protocol.cpp

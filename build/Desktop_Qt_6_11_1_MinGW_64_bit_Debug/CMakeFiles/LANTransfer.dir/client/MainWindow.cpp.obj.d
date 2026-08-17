@@ -413,23 +413,8 @@ CMakeFiles/LANTransfer.dir/client/MainWindow.cpp.obj: \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsondocument.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonparseerror.h \
  D:\01_Study\08_qt\LANTransfer\client\TransferManager.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/QComboBox \
- D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qcombobox.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qstyleoption.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qabstractspinbox.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtGui/qvalidator.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qslider.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qabstractslider.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qstyle.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qtabbar.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qrubberband.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qframe.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qabstractitemmodel.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/QFileDialog \
- D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qfiledialog.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdir.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdirlisting.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QFile \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfile.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfiledevice.h \
  D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/filesystem \
  D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_fwd.h \
@@ -461,7 +446,23 @@ CMakeFiles/LANTransfer.dir/client/MainWindow.cpp.obj: \
  D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/codecvt \
  D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_dir.h \
  D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfile.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/QComboBox \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qcombobox.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qstyleoption.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qabstractspinbox.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtGui/qvalidator.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qslider.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qabstractslider.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qstyle.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qtabbar.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qrubberband.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qframe.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qabstractitemmodel.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/QFileDialog \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qfiledialog.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdir.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdirlisting.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfileinfo.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtimezone.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qdialog.h \

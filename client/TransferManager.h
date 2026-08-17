@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QString>
 #include <QJsonObject>
+#include <QFile>
 
 #include "../common/Protocol.h"
 
@@ -24,14 +25,25 @@ private slots:
     void onMessageReceived(
         Protocol::MessageType type,
         const QByteArray &payload);
+    void onBytesWritten(qint64 bytes);
 
 signals:
     void logMessage(const QString &message);
     void transferFailed(const QString &message);
+    void progressChanged(
+        qint64 sent,
+        qint64 total);
+private:
+    void sendNextChunk();
 
 private:
     NetworkManager *networkManager;
     QString currentFilePath;
+    QFile sendFile;
+    qint64 fileSize = 0;
+    qint64 sentBytes = 0;
+    bool waitingForWrite = false;
+    static constexpr qint64 ChunkSize = 64 * 1024;
 };
 
 #endif // TRANSFERMANAGER_H

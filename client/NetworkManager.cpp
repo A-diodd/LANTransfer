@@ -23,7 +23,16 @@ NetworkManager::NetworkManager(QObject *parent)
 			&QTcpSocket::errorOccurred,
 			this,
 			&NetworkManager::onErrorOccurred);
+	
+	connect(socket,
+			&QTcpSocket::bytesWritten,
+			this,
+			&NetworkManager::onBytesWritten);
 }
+
+
+
+	
 
 void NetworkManager::connectToServer(
     const QString &ip,
@@ -102,3 +111,7 @@ void NetworkManager::onErrorOccurred(QAbstractSocket::SocketError socketError)
 	emit errorOccurred(socket->errorString());
 }
 
+void NetworkManager::onBytesWritten(qint64 bytes)
+{
+    emit bytesWritten(bytes);
+}
