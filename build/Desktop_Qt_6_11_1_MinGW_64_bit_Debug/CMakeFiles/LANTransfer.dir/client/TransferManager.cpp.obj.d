@@ -395,6 +395,9 @@ CMakeFiles/LANTransfer.dir/client/TransferManager.cpp.obj: \
  D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/codecvt \
  D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_dir.h \
  D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QFileInfo \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfileinfo.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtimezone.h \
  D:/01_Study/08_qt/LANTransfer/common/Protocol.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QByteArray \
  D:\01_Study\08_qt\LANTransfer\client\NetworkManager.h \
@@ -405,7 +408,4 @@ CMakeFiles/LANTransfer.dir/client/TransferManager.cpp.obj: \
  D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qtnetworkexports.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qabstractsocket.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qhostaddress.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QFileInfo \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfileinfo.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtimezone.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QDebug

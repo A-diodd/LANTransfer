@@ -95,11 +95,11 @@ void FileServer::handleMessage(
     }
 
 
-  /*  case Protocol::MessageType::FileData:
+    case Protocol::MessageType::FileData:
     {
         handleFileData(socket,payload);
         break;
-    }*/
+    }
 
 
     default:
@@ -158,18 +158,18 @@ void FileServer::handleFileInfo(
     QJsonObject object =
         document.object();
 
-    QString name =
+    QString fileName =
         object["file_name"].toString();
 
     expectedSize =
         object["file_size"]
             .toString()
             .toLongLong();
-    
-    receivedSize=0;
-    
-    QFileInfo fileInfo(name);
-    
+
+    receivedSize = 0;
+
+    QFileInfo fileInfo(fileName);
+
     QString safeName =
         fileInfo.fileName();
 
@@ -180,7 +180,8 @@ void FileServer::handleFileInfo(
             QIODevice::WriteOnly))
     {
         qDebug()
-            << "Failed to open output file.";
+            << "Failed to open output file:"
+            << receiveFile.errorString();
 
         return;
     }
@@ -195,8 +196,7 @@ void FileServer::handleFileInfo(
 
     QJsonObject response;
 
-    response["result"] =
-        "accepted";
+    response["result"] = "accepted";
 
     QJsonDocument responseDocument(
         response);

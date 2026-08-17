@@ -3,6 +3,7 @@ D:/01_Study/08_qt/LANTransfer/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/LANTran
   D:/01_Study/08_qt/LANTransfer/common/Protocol.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QByteArray \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QFile \
+  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QFileInfo \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QJsonObject \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QObject \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QString \
@@ -52,6 +53,7 @@ D:/01_Study/08_qt/LANTransfer/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/LANTran
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qexceptionhandling.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfile.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfiledevice.h \
+  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfileinfo.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qflags.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfloat16.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qforeach.h \
@@ -125,6 +127,7 @@ D:/01_Study/08_qt/LANTransfer/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/LANTran
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtenvironmentvariables.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtextstream.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtformat_impl.h \
+  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtimezone.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtmetamacros.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtnoop.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtpreprocessorsupport.h \

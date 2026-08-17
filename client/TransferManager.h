@@ -5,6 +5,7 @@
 #include <QString>
 #include <QJsonObject>
 #include <QFile>
+#include <QFileInfo>
 
 #include "../common/Protocol.h"
 

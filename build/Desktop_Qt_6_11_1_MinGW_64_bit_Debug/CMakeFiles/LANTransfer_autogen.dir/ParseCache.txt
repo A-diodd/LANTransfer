@@ -742,6 +742,7 @@ D:/01_Study/08_qt/LANTransfer/client/NetworkManager.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h
+D:/01_Study/08_qt/LANTransfer/common/Protocol.h
 D:/01_Study/08_qt/LANTransfer/client/TransferManager.h
  mmc:Q_OBJECT
  mdp:D:/01_Study/08_qt/LANTransfer/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/LANTransfer_autogen/moc_predefs.h
@@ -749,6 +750,7 @@ D:/01_Study/08_qt/LANTransfer/client/TransferManager.h
  mdp:D:/01_Study/08_qt/LANTransfer/common/Protocol.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QByteArray
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QFile
+ mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QFileInfo
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QJsonObject
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QObject
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QString
@@ -798,6 +800,7 @@ D:/01_Study/08_qt/LANTransfer/client/TransferManager.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qexceptionhandling.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfile.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfiledevice.h
+ mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfileinfo.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qflags.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfloat16.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qforeach.h
@@ -871,6 +874,7 @@ D:/01_Study/08_qt/LANTransfer/client/TransferManager.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtenvironmentvariables.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtextstream.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtformat_impl.h
+ mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtimezone.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtmetamacros.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtnoop.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtpreprocessorsupport.h
@@ -1132,9 +1136,8 @@ D:/01_Study/08_qt/LANTransfer/client/TransferManager.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h
  mdp:D:/02_app/qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wctype.h
-D:/01_Study/08_qt/LANTransfer/common/Protocol.h
-D:/01_Study/08_qt/LANTransfer/client/MainWindow.cpp
 D:/01_Study/08_qt/LANTransfer/client/main.cpp
+D:/01_Study/08_qt/LANTransfer/client/MainWindow.cpp
 D:/01_Study/08_qt/LANTransfer/client/NetworkManager.cpp
 D:/01_Study/08_qt/LANTransfer/client/TransferManager.cpp
 D:/01_Study/08_qt/LANTransfer/common/Protocol.cpp

@@ -446,6 +446,9 @@ CMakeFiles/LANTransfer.dir/client/MainWindow.cpp.obj: \
  D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/codecvt \
  D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_dir.h \
  D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QFileInfo \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfileinfo.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtimezone.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/QComboBox \
  D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qcombobox.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
@@ -463,8 +466,6 @@ CMakeFiles/LANTransfer.dir/client/MainWindow.cpp.obj: \
  D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qfiledialog.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdir.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdirlisting.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfileinfo.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtimezone.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qdialog.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/QGroupBox \
  D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qgroupbox.h \
