@@ -449,6 +449,8 @@ CMakeFiles/LANTransfer.dir/client/MainWindow.cpp.obj: \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QFileInfo \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfileinfo.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtimezone.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QCryptographicHash \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcryptographichash.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/QComboBox \
  D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qcombobox.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtWidgets/qabstractitemdelegate.h \

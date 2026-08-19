@@ -6,6 +6,8 @@
 #include <QJsonObject>
 #include <QFile>
 #include <QFileInfo>
+#include <QCryptographicHash>
+
 
 #include "../common/Protocol.h"
 
@@ -44,6 +46,13 @@ private:
     qint64 fileSize = 0;
     qint64 sentBytes = 0;
     bool waitingForWrite = false;
+    qint64 pendingWriteBytes = 0;
+
+    bool finishSent = false;
+
+    QCryptographicHash sendHash{
+        QCryptographicHash::Sha256
+    };
     static constexpr qint64 ChunkSize = 64 * 1024;
 };
 

@@ -114,62 +114,179 @@ void TransferManager::onMessageReceived(
 		}   
 		fileSize=sendFile.size();
 		sentBytes=0;
+		
+		waitingForWrite =false;
+		pendingWriteBytes =0;
+		finishSent= false;
+		sendHash.reset(); 
 		emit logMessage("[INFO] Start sending file...");
 		sendNextChunk();
 
         return;
     }
+    if(type ==Protocol::MessageType::Ack)
+    {
+    	if(sendFile.isOpen())
+    		sendFile.close();
+    	
+    	emit progressChanged(
+			fileSize,
+			fileSize);
+		
+		emit logMessage(
+			"[INFO] File transfer completed.");
+		
+		return;
+	}
+	
+	if(type ==Protocol::MessageType::Error)
+	{
+		if(sendFile.isOpen())
+			sendFile.close();
+		QJsonParseError error;
+		QJsonDocument document=
+			QJsonDocument::fromJson(
+				payload,
+				&error);
+		QString message="Server reported transfer error";
+		
+        if (error.error ==
+            QJsonParseError::NoError &&
+            document.isObject())
+        {
+            QJsonObject object =
+                document.object();
+
+            message =
+                object["message"]
+                    .toString(message);
+        }
+
+        emit transferFailed(message);
+	}
 }
 
 void TransferManager::sendNextChunk()
 {
-	if(!sendFile.isOpen())
-		return;
-	
-    if(sentBytes>=fileSize)
-	{
-		sendFile.close();
-		emit logMessage(
-            "[INFO] File data sent.");
-		return;
-		
-	}
-	QByteArray chunk=sendFile.read(ChunkSize);
-	
-	if(chunk.isEmpty())
-	{
-		if(sendFile.atEnd())
-		{
-			sendFile.close();
-			emit logMessage(
-				"[INFO] File data sent.");
-		}
-		return;
-	}
-	QByteArray message=
-		Protocol::buildMessage(
+    if (!sendFile.isOpen())
+        return;
+
+    if (waitingForWrite)
+        return;
+
+    // 所有文件数据已经读取完
+    if (sentBytes >= fileSize)
+    {
+        if (finishSent)
+            return;
+
+        QByteArray hash =
+            sendHash.result().toHex();
+
+        QJsonObject payload;
+
+        payload["sha256"] =
+            QString::fromLatin1(hash);
+
+        payload["file_size"] =
+            QString::number(fileSize);
+
+        QJsonDocument document(payload);
+
+        QByteArray json =
+            document.toJson(
+                QJsonDocument::Compact);
+
+        QByteArray message =
+            Protocol::buildMessage(
+                Protocol::MessageType::FileFinish,
+                json);
+
+        networkManager->sendData(message);
+
+        pendingWriteBytes =
+            message.size();
+
+        waitingForWrite = true;
+        finishSent = true;
+
+        emit logMessage(
+            "[INFO] FileFinish sent.");
+
+        return;
+    }
+
+
+    QByteArray chunk =
+        sendFile.read(ChunkSize);
+
+    if (chunk.isEmpty())
+    {
+        if (sendFile.atEnd())
+        {
+            sentBytes = fileSize;
+
+            sendNextChunk();
+        }
+
+        return;
+    }
+
+
+    // 增量计算 SHA-256
+    sendHash.addData(chunk);
+
+
+    QByteArray message =
+        Protocol::buildMessage(
             Protocol::MessageType::FileData,
-			chunk);
-	networkManager->sendData(message);
-    sentBytes+=chunk.size();
-	emit progressChanged(
-		sentBytes,
-		fileSize);
-	
-	waitingForWrite =true;
+            chunk);
+
+
+    networkManager->sendData(message);
+
+
+    sentBytes += chunk.size();
+
+
+    pendingWriteBytes =
+        message.size();
+
+    waitingForWrite = true;
+
+
+    emit progressChanged(
+        sentBytes,
+        fileSize);
 }
 
 void TransferManager::onBytesWritten(
-	qint64 bytes)
+    qint64 bytes)
 {
-	Q_UNUSED(bytes);
-	
-	if(!waitingForWrite)
-		return;
-	
-	if(networkManager->isConnected())
-	{
-		waitingForWrite=false;
-		sendNextChunk();
-	}
+    if (!waitingForWrite)
+        return;
+
+    pendingWriteBytes -= bytes;
+
+    if (pendingWriteBytes > 0)
+        return;
+
+    waitingForWrite = false;
+    pendingWriteBytes = 0;
+
+    if (finishSent)
+    {
+        if (sendFile.isOpen())
+            sendFile.close();
+
+        emit logMessage(
+            "[INFO] FileFinish sent completely.");
+
+        return;
+    }
+
+    if (networkManager->isConnected())
+    {
+        sendNextChunk();
+    }
 }

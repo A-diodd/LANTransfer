@@ -7,6 +7,8 @@
 #include <QJsonObject>
 #include <QFile>
 #include <QString>
+#include <QCryptographicHash>
+
 
 class FileServer : public QObject
 {
@@ -45,6 +47,7 @@ private:
         QTcpSocket *socket,
         const QByteArray &payload);
 
+
 private:
 
     QTcpServer *server;
@@ -54,8 +57,11 @@ private:
     QFile receiveFile;
 
     qint64 expectedSize = 0;
-
     qint64 receivedSize = 0;
+
+    QCryptographicHash receiveHash{
+        QCryptographicHash::Sha256
+    };
 };
 
 #endif // FILESERVER_H

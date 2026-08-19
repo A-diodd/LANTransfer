@@ -2,6 +2,7 @@ D:/01_Study/08_qt/LANTransfer/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/FileSer
   D:/01_Study/08_qt/LANTransfer/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/FileServer_autogen/moc_predefs.h \
   D:/01_Study/08_qt/LANTransfer/common/Protocol.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QByteArray \
+  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QCryptographicHash \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QFile \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QJsonObject \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QObject \
@@ -44,6 +45,7 @@ D:/01_Study/08_qt/LANTransfer/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/FileSer
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcontainerinfo.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcontainertools_impl.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcontiguouscache.h \
+  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcryptographichash.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdarwinhelpers.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdatastream.h \
   D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdatetime.h \

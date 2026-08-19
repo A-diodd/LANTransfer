@@ -87,10 +87,10 @@ void MainWindow::setupUi()
 
     progressBar = new QProgressBar(progressGroup);
     progressBar->setRange(0, 100);
-    progressBar->setValue(50);
+    progressBar->setValue(0);
 
     transferInfoLabel =
-        new QLabel("50 MB / 100 MB", progressGroup);
+        new QLabel("0 MB / 0 MB", progressGroup);
 
     speedLabel =
         new QLabel("0 MB/s", progressGroup);

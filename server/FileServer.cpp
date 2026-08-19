@@ -40,7 +40,7 @@ void FileServer::onNewConnection()
 }
 
 
-
+// 客户端有数据发送过来触发的槽函数
 void FileServer::onReadyRead()
 {
 
@@ -100,6 +100,12 @@ void FileServer::handleMessage(
         handleFileData(socket,payload);
         break;
     }
+    case Protocol::MessageType::FileFinish:
+    {
+        handleFileFinish(socket, payload);
+        break;
+    }
+
 
 
     default:
@@ -167,6 +173,7 @@ void FileServer::handleFileInfo(
             .toLongLong();
 
     receivedSize = 0;
+    receiveHash.reset();
 
     QFileInfo fileInfo(fileName);
 
@@ -218,32 +225,181 @@ void FileServer::handleFileData(
     Q_UNUSED(socket);
 
     if (!receiveFile.isOpen())
+    {
+        qDebug()
+            << "Receive file is not open.";
+
         return;
+    }
+
+
+    if (receivedSize + payload.size()
+        > expectedSize)
+    {
+        qDebug()
+            << "Received more data than expected.";
+
+        receiveFile.close();
+        receiveFile.remove();
+
+        return;
+    }
+
 
     qint64 written =
         receiveFile.write(payload);
+
 
     if (written != payload.size())
     {
         qDebug()
             << "Failed to write file.";
 
+        receiveFile.close();
+        receiveFile.remove();
+
         return;
     }
 
+
+    receiveHash.addData(payload);
+
     receivedSize += written;
+
 
     qDebug()
         << "Received:"
         << receivedSize
         << "/"
         << expectedSize;
+}
 
-    if (receivedSize >= expectedSize)
+void FileServer::handleFileFinish(
+    QTcpSocket *socket,
+    const QByteArray &payload)
+{
+    QJsonParseError error;
+
+    QJsonDocument document =
+        QJsonDocument::fromJson(
+            payload,
+            &error);
+
+    if (error.error !=
+        QJsonParseError::NoError ||
+        !document.isObject())
     {
-        receiveFile.close();
-
         qDebug()
-            << "File received completely.";
+            << "Invalid FileFinish.";
+
+        return;
     }
+
+
+    QJsonObject object =
+        document.object();
+
+
+    QString clientHash =
+        object["sha256"].toString();
+
+
+    QString serverHash =
+        QString::fromLatin1(
+            receiveHash.result().toHex());
+
+
+    qDebug()
+        << "Client SHA256:"
+        << clientHash;
+
+    qDebug()
+        << "Server SHA256:"
+        << serverHash;
+
+
+    // 1. 文件大小检查
+    if (receivedSize != expectedSize)
+    {
+        qDebug()
+            << "File size mismatch.";
+
+        receiveFile.close();
+        receiveFile.remove();
+
+        QJsonObject response;
+
+        response["message"] =
+            "File size mismatch.";
+
+        QJsonDocument responseDocument(
+            response);
+
+        QByteArray json =
+            responseDocument.toJson(
+                QJsonDocument::Compact);
+
+        socket->write(
+            Protocol::buildMessage(
+                Protocol::MessageType::Error,
+                json));
+
+        return;
+    }
+
+
+    // 2. SHA-256 检查
+    if (clientHash != serverHash)
+    {
+        qDebug()
+            << "File hash mismatch.";
+
+        receiveFile.close();
+        receiveFile.remove();
+
+        QJsonObject response;
+
+        response["message"] =
+            "File hash mismatch.";
+
+        QJsonDocument responseDocument(
+            response);
+
+        QByteArray json =
+            responseDocument.toJson(
+                QJsonDocument::Compact);
+
+        socket->write(
+            Protocol::buildMessage(
+                Protocol::MessageType::Error,
+                json));
+
+        return;
+    }
+
+
+    // 3. 校验成功
+    receiveFile.close();
+
+
+    qDebug()
+        << "File integrity check passed.";
+
+    QJsonObject response;
+
+    response["result"] =
+        "success";
+
+    QJsonDocument responseDocument(
+        response);
+
+    QByteArray json =
+        responseDocument.toJson(
+            QJsonDocument::Compact);
+
+
+    socket->write(
+        Protocol::buildMessage(
+            Protocol::MessageType::Ack,
+            json));
 }

@@ -749,6 +749,7 @@ D:/01_Study/08_qt/LANTransfer/client/TransferManager.h
  mdp:D:/01_Study/08_qt/LANTransfer/client/TransferManager.h
  mdp:D:/01_Study/08_qt/LANTransfer/common/Protocol.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QByteArray
+ mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QCryptographicHash
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QFile
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QFileInfo
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QJsonObject
@@ -792,6 +793,7 @@ D:/01_Study/08_qt/LANTransfer/client/TransferManager.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcontainerinfo.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcontainertools_impl.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcontiguouscache.h
+ mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcryptographichash.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdarwinhelpers.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdatastream.h
  mdp:D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdatetime.h
