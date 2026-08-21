@@ -87,7 +87,7 @@ CMakeFiles/LANTransfer.dir/all: CMakeFiles/LANTransfer_autogen.dir/all
 CMakeFiles/LANTransfer.dir/all: CMakeFiles/LANTransfer_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LANTransfer.dir\build.make CMakeFiles/LANTransfer.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LANTransfer.dir\build.make CMakeFiles/LANTransfer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\01_Study\08_qt\LANTransfer\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=8,9,10,11,12,13,14,15 "Built target LANTransfer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\01_Study\08_qt\LANTransfer\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=10,11,12,13,14,15,16,17 "Built target LANTransfer"
 .PHONY : CMakeFiles/LANTransfer.dir/all
 
 # Build rule for subdir invocation for target.
@@ -110,16 +110,16 @@ CMakeFiles/LANTransfer.dir/clean:
 # Target rules for target CMakeFiles/FileServer.dir
 
 # All Build rule for target.
-CMakeFiles/FileServer.dir/all: CMakeFiles/FileServer_autogen_timestamp_deps.dir/all
 CMakeFiles/FileServer.dir/all: CMakeFiles/FileServer_autogen.dir/all
+CMakeFiles/FileServer.dir/all: CMakeFiles/FileServer_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileServer.dir\build.make CMakeFiles/FileServer.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileServer.dir\build.make CMakeFiles/FileServer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\01_Study\08_qt\LANTransfer\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=1,2,3,4,5,6 "Built target FileServer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\01_Study\08_qt\LANTransfer\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target FileServer"
 .PHONY : CMakeFiles/FileServer.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/FileServer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\01_Study\08_qt\LANTransfer\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles 7
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\01_Study\08_qt\LANTransfer\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/FileServer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\01_Study\08_qt\LANTransfer\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles 0
 .PHONY : CMakeFiles/FileServer.dir/rule
@@ -166,7 +166,7 @@ CMakeFiles/LANTransfer_autogen_timestamp_deps.dir/clean:
 CMakeFiles/LANTransfer_autogen.dir/all: CMakeFiles/LANTransfer_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LANTransfer_autogen.dir\build.make CMakeFiles/LANTransfer_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\LANTransfer_autogen.dir\build.make CMakeFiles/LANTransfer_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\01_Study\08_qt\LANTransfer\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=16 "Built target LANTransfer_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\01_Study\08_qt\LANTransfer\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=18 "Built target LANTransfer_autogen"
 .PHONY : CMakeFiles/LANTransfer_autogen.dir/all
 
 # Build rule for subdir invocation for target.
@@ -218,7 +218,7 @@ CMakeFiles/FileServer_autogen_timestamp_deps.dir/clean:
 CMakeFiles/FileServer_autogen.dir/all: CMakeFiles/FileServer_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileServer_autogen.dir\build.make CMakeFiles/FileServer_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileServer_autogen.dir\build.make CMakeFiles/FileServer_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\01_Study\08_qt\LANTransfer\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=7 "Built target FileServer_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\01_Study\08_qt\LANTransfer\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=9 "Built target FileServer_autogen"
 .PHONY : CMakeFiles/FileServer_autogen.dir/all
 
 # Build rule for subdir invocation for target.

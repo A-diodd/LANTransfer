@@ -46,6 +46,9 @@ template <> constexpr inline auto TransferManager::qt_create_metaobjectdata<qt_m
         "progressChanged",
         "sent",
         "total",
+        "stateChanged",
+        "TransferState",
+        "state",
         "onConnected",
         "onMessageReceived",
         "Protocol::MessageType",
@@ -68,15 +71,19 @@ template <> constexpr inline auto TransferManager::qt_create_metaobjectdata<qt_m
         QtMocHelpers::SignalData<void(qint64, qint64)>(5, 2, QMC::AccessPublic, QMetaType::Void, {{
             { QMetaType::LongLong, 6 }, { QMetaType::LongLong, 7 },
         }}),
+        // Signal 'stateChanged'
+        QtMocHelpers::SignalData<void(enum TransferState)>(8, 2, QMC::AccessPublic, QMetaType::Void, {{
+            { 0x80000000 | 9, 10 },
+        }}),
         // Slot 'onConnected'
-        QtMocHelpers::SlotData<void()>(8, 2, QMC::AccessPrivate, QMetaType::Void),
+        QtMocHelpers::SlotData<void()>(11, 2, QMC::AccessPrivate, QMetaType::Void),
         // Slot 'onMessageReceived'
-        QtMocHelpers::SlotData<void(Protocol::MessageType, const QByteArray &)>(9, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { 0x80000000 | 10, 11 }, { QMetaType::QByteArray, 12 },
+        QtMocHelpers::SlotData<void(Protocol::MessageType, const QByteArray &)>(12, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 13, 14 }, { QMetaType::QByteArray, 15 },
         }}),
         // Slot 'onBytesWritten'
-        QtMocHelpers::SlotData<void(qint64)>(13, 2, QMC::AccessPrivate, QMetaType::Void, {{
-            { QMetaType::LongLong, 14 },
+        QtMocHelpers::SlotData<void(qint64)>(16, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { QMetaType::LongLong, 17 },
         }}),
     };
     QtMocHelpers::UintData qt_properties {
@@ -104,9 +111,10 @@ void TransferManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         case 0: _t->logMessage((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
         case 1: _t->transferFailed((*reinterpret_cast<std::add_pointer_t<QString>>(_a[1]))); break;
         case 2: _t->progressChanged((*reinterpret_cast<std::add_pointer_t<qint64>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<qint64>>(_a[2]))); break;
-        case 3: _t->onConnected(); break;
-        case 4: _t->onMessageReceived((*reinterpret_cast<std::add_pointer_t<Protocol::MessageType>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QByteArray>>(_a[2]))); break;
-        case 5: _t->onBytesWritten((*reinterpret_cast<std::add_pointer_t<qint64>>(_a[1]))); break;
+        case 3: _t->stateChanged((*reinterpret_cast<std::add_pointer_t<enum TransferState>>(_a[1]))); break;
+        case 4: _t->onConnected(); break;
+        case 5: _t->onMessageReceived((*reinterpret_cast<std::add_pointer_t<Protocol::MessageType>>(_a[1])),(*reinterpret_cast<std::add_pointer_t<QByteArray>>(_a[2]))); break;
+        case 6: _t->onBytesWritten((*reinterpret_cast<std::add_pointer_t<qint64>>(_a[1]))); break;
         default: ;
         }
     }
@@ -116,6 +124,8 @@ void TransferManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         if (QtMocHelpers::indexOfMethod<void (TransferManager::*)(const QString & )>(_a, &TransferManager::transferFailed, 1))
             return;
         if (QtMocHelpers::indexOfMethod<void (TransferManager::*)(qint64 , qint64 )>(_a, &TransferManager::progressChanged, 2))
+            return;
+        if (QtMocHelpers::indexOfMethod<void (TransferManager::*)(TransferState )>(_a, &TransferManager::stateChanged, 3))
             return;
     }
 }
@@ -139,14 +149,14 @@ int TransferManager::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 6)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 6;
+        _id -= 7;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 6)
+        if (_id < 7)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 6;
+        _id -= 7;
     }
     return _id;
 }
@@ -167,5 +177,11 @@ void TransferManager::transferFailed(const QString & _t1)
 void TransferManager::progressChanged(qint64 _t1, qint64 _t2)
 {
     QMetaObject::activate<void>(this, &staticMetaObject, 2, nullptr, _t1, _t2);
+}
+
+// SIGNAL 3
+void TransferManager::stateChanged(TransferState _t1)
+{
+    QMetaObject::activate<void>(this, &staticMetaObject, 3, nullptr, _t1);
 }
 QT_WARNING_POP

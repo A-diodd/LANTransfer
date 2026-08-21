@@ -26,6 +26,10 @@ qt_add_executable(FileServer
     server/main.cpp
     server/FileServer.h
     server/FileServer.cpp
+    server/ClientConnection.cpp
+    server/ClientConnection.h
+    server/TransferReceiver.cpp
+    server/TransferReceiver.h
 
     common/Protocol.h
     common/Protocol.cpp

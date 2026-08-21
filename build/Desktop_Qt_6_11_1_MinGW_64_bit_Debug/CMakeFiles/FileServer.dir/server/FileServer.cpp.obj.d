@@ -334,6 +334,7 @@ CMakeFiles/FileServer.dir/server/FileServer.cpp.obj: \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q20iterator.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qhostaddress.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qshareddata.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QList \
  D:/01_Study/08_qt/LANTransfer/common/Protocol.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QByteArray \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QString \
@@ -371,6 +372,10 @@ CMakeFiles/FileServer.dir/server/FileServer.cpp.obj: \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qendian.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsondocument.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonparseerror.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/QTcpSocket \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qtcpsocket.h \
+ D:\01_Study\08_qt\LANTransfer\server\ClientConnection.h \
+ D:\01_Study\08_qt\LANTransfer\server\TransferReceiver.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QFile \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfile.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfiledevice.h \
@@ -405,10 +410,4 @@ CMakeFiles/FileServer.dir/server/FileServer.cpp.obj: \
  D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_dir.h \
  D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QCryptographicHash \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcryptographichash.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/QTcpSocket \
- D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qtcpsocket.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QJsonDocument \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QFileInfo \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfileinfo.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtimezone.h
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcryptographichash.h

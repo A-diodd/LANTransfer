@@ -33,55 +33,79 @@ TransferManager::TransferManager(
 void TransferManager::startTransfer(
 	const QString &filePath)
 {
-	QFileInfo fileInfo(filePath);
-	
-	if(!fileInfo.exists()|| !fileInfo.isFile())
+	if(state!=TransferState::Idle&&
+	   state!=TransferState::Completed&&
+	   state!=TransferState::Failed&&
+	   state!=TransferState::Canceled)
 	{
-		emit transferFailed(
-			"File does not exits.");
-			
 		return;
 	}
 	
-	currentFilePath =filePath;
-    fileSize = fileInfo.size();
-    sentBytes = 0;
-	emit logMessage(
-		"[INFO] Preparing file:"
-		+ fileInfo.fileName());
+	QFileInfo info(filePath);
 	
-	networkManager->connectToServer(
-		"127.0.0.1",
-		 9000);
+	if(!info.exists()|| !info.isFile())
+	{
+		emit transferFailed(
+			"File does not exits.");
+		
+		setState(TransferState::Failed);
+		return;
+	}
+	
+    currentFilePath = filePath;
+
+    file.setFileName(
+        currentFilePath);
+
+    if(!file.open(
+        QIODevice::ReadOnly))
+    {
+
+        emit transferFailed(
+            "Cannot open file");
+
+        setState(
+            TransferState::Failed);
+
+        return;
+    }
+
+    fileSize =
+        file.size();
+
+    sentBytes = 0;
+
+    sendHash.reset();
+
+    setState(
+        TransferState::Connecting);
+        
+    networkManager->connectToServer(
+        "127.0.0.1",
+        9000);
+
 }
 
 void TransferManager::onConnected()
 {
-    QFileInfo fileInfo(currentFilePath);
+    setState(
+        TransferState::WaitingHelloAck);
 
-    QJsonObject payload;
 
-    payload["file_name"] =
-        fileInfo.fileName();
+    QByteArray payload;
 
-    payload["file_size"] =
-        QString::number(fileInfo.size());
-
-    QJsonDocument document(payload);
-
-    QByteArray json =
-        document.toJson(
-            QJsonDocument::Compact);
 
     QByteArray message =
         Protocol::buildMessage(
-            Protocol::MessageType::FileInfo,
-            json);
+            Protocol::MessageType::Hello,
+            payload);
+
 
     networkManager->sendData(message);
 
+
     emit logMessage(
-        "[INFO] FileInfo sent.");
+        "[INFO] Hello sent.");
 }
 
 //服务端收到回应的时候开始处理。。。
@@ -92,9 +116,12 @@ void TransferManager::onMessageReceived(
     if (type ==
         Protocol::MessageType::HelloAck)
     {
+
         emit logMessage(
             "[INFO] HelloAck received.");
-
+        
+        sendFileInfo();
+    
         return;
     }
 
@@ -104,21 +131,14 @@ void TransferManager::onMessageReceived(
         emit logMessage(
             "[INFO] Server accepted file.");
         
-		sendFile.setFileName(currentFilePath);
-		
-		if(!sendFile.open(QIODevice::ReadOnly))
-		{
-			emit transferFailed(
-				"Failed to open file.");
-			return;	
-		}   
-		fileSize=sendFile.size();
+		fileSize=file.size();
 		sentBytes=0;
-		
-		waitingForWrite =false;
+		file.seek(0);
 		pendingWriteBytes =0;
-		finishSent= false;
+
 		sendHash.reset(); 
+        setState(
+            TransferState::Sending);
 		emit logMessage("[INFO] Start sending file...");
 		sendNextChunk();
 
@@ -126,9 +146,12 @@ void TransferManager::onMessageReceived(
     }
     if(type ==Protocol::MessageType::Ack)
     {
-    	if(sendFile.isOpen())
-    		sendFile.close();
-    	
+    	if(file.isOpen())
+    		file.close();
+
+        setState(
+            TransferState::Completed
+        );
     	emit progressChanged(
 			fileSize,
 			fileSize);
@@ -141,8 +164,8 @@ void TransferManager::onMessageReceived(
 	
 	if(type ==Protocol::MessageType::Error)
 	{
-		if(sendFile.isOpen())
-			sendFile.close();
+		if(file.isOpen())
+			file.close();
 		QJsonParseError error;
 		QJsonDocument document=
 			QJsonDocument::fromJson(
@@ -163,79 +186,59 @@ void TransferManager::onMessageReceived(
         }
 
         emit transferFailed(message);
+        setState(
+        TransferState::Failed
+    );
 	}
+}
+
+void TransferManager::sendFileInfo()
+{
+	QFileInfo info(
+		currentFilePath);
+	
+	QJsonObject payload;
+	payload["file_name"]=info.fileName();
+	payload["file_size"]=QString::number(info.size());
+	QJsonDocument document(payload);
+	QByteArray json=document.toJson(QJsonDocument::Compact);
+	QByteArray message=
+		Protocol::buildMessage(
+			Protocol::MessageType::FileInfo,
+			json);
+	networkManager->sendData(message);
+	emit logMessage("[INFO] FileInfo sent.");
+    setState(
+    TransferState::WaitingAccept
+);
 }
 
 void TransferManager::sendNextChunk()
 {
-    if (!sendFile.isOpen())
+    if (!file.isOpen())
         return;
 
-    if (waitingForWrite)
+    if (pendingWriteBytes > 0)
         return;
 
     // 所有文件数据已经读取完
     if (sentBytes >= fileSize)
     {
-        if (finishSent)
-            return;
-
-        QByteArray hash =
-            sendHash.result().toHex();
-
-        QJsonObject payload;
-
-        payload["sha256"] =
-            QString::fromLatin1(hash);
-
-        payload["file_size"] =
-            QString::number(fileSize);
-
-        QJsonDocument document(payload);
-
-        QByteArray json =
-            document.toJson(
-                QJsonDocument::Compact);
-
-        QByteArray message =
-            Protocol::buildMessage(
-                Protocol::MessageType::FileFinish,
-                json);
-
-        networkManager->sendData(message);
-
-        pendingWriteBytes =
-            message.size();
-
-        waitingForWrite = true;
-        finishSent = true;
-
-        emit logMessage(
-            "[INFO] FileFinish sent.");
-
+        sendFileFinish();
         return;
     }
 
-
     QByteArray chunk =
-        sendFile.read(ChunkSize);
+        file.read(ChunkSize);
 
     if (chunk.isEmpty())
     {
-        if (sendFile.atEnd())
-        {
-            sentBytes = fileSize;
-
-            sendNextChunk();
-        }
-
         return;
     }
 
 
     // 增量计算 SHA-256
     sendHash.addData(chunk);
-
 
     QByteArray message =
         Protocol::buildMessage(
@@ -248,12 +251,8 @@ void TransferManager::sendNextChunk()
 
     sentBytes += chunk.size();
 
-
     pendingWriteBytes =
         message.size();
-
-    waitingForWrite = true;
-
 
     emit progressChanged(
         sentBytes,
@@ -263,30 +262,83 @@ void TransferManager::sendNextChunk()
 void TransferManager::onBytesWritten(
     qint64 bytes)
 {
-    if (!waitingForWrite)
-        return;
-
     pendingWriteBytes -= bytes;
 
     if (pendingWriteBytes > 0)
         return;
 
-    waitingForWrite = false;
     pendingWriteBytes = 0;
 
-    if (finishSent)
+    if(state ==
+       TransferState::WaitingAck)
     {
-        if (sendFile.isOpen())
-            sendFile.close();
-
         emit logMessage(
-            "[INFO] FileFinish sent completely.");
+            "[INFO] Waiting server ACK."
+        );
 
         return;
     }
 
-    if (networkManager->isConnected())
+    if(state ==
+       TransferState::Sending)
     {
         sendNextChunk();
     }
+}
+
+void TransferManager::setState(
+	TransferState newState)
+{
+	if(state==newState)
+		return;
+	
+	state=newState;
+	emit stateChanged(state);
+	qDebug()
+		<<"Transfer state changed:"
+		<<static_cast<int>(state);
+}
+
+void TransferManager::sendFileFinish()
+{
+    setState(
+        TransferState::Finishing
+    );
+
+    QByteArray hash =
+        sendHash.result().toHex();
+
+    QJsonObject payload;
+
+    payload["sha256"] =
+        QString::fromLatin1(hash);
+
+    payload["file_size"] =
+        QString::number(fileSize);
+
+    QJsonDocument document(payload);
+
+    QByteArray json =
+        document.toJson(
+            QJsonDocument::Compact);
+
+    QByteArray message =
+        Protocol::buildMessage(
+            Protocol::MessageType::FileFinish,
+            json);
+
+    networkManager->sendData(
+        message
+    );
+
+    pendingWriteBytes =
+        message.size();
+
+    setState(
+        TransferState::WaitingAck
+    );
+
+    emit logMessage(
+        "[INFO] FileFinish sent."
+    );
 }

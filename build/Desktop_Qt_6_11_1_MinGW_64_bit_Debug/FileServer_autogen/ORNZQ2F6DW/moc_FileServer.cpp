@@ -41,14 +41,18 @@ template <> constexpr inline auto FileServer::qt_create_metaobjectdata<qt_meta_t
         "FileServer",
         "onNewConnection",
         "",
-        "onReadyRead"
+        "onClientDisconnected",
+        "ClientConnection*",
+        "connection"
     };
 
     QtMocHelpers::UintData qt_methods {
         // Slot 'onNewConnection'
         QtMocHelpers::SlotData<void()>(1, 2, QMC::AccessPrivate, QMetaType::Void),
-        // Slot 'onReadyRead'
-        QtMocHelpers::SlotData<void()>(3, 2, QMC::AccessPrivate, QMetaType::Void),
+        // Slot 'onClientDisconnected'
+        QtMocHelpers::SlotData<void(ClientConnection *)>(3, 2, QMC::AccessPrivate, QMetaType::Void, {{
+            { 0x80000000 | 4, 5 },
+        }}),
     };
     QtMocHelpers::UintData qt_properties {
     };
@@ -73,11 +77,10 @@ void FileServer::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->onNewConnection(); break;
-        case 1: _t->onReadyRead(); break;
+        case 1: _t->onClientDisconnected((*reinterpret_cast<std::add_pointer_t<ClientConnection*>>(_a[1]))); break;
         default: ;
         }
     }
-    (void)_a;
 }
 
 const QMetaObject *FileServer::metaObject() const

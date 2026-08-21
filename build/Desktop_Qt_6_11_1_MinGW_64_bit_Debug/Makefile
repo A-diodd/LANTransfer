@@ -364,6 +364,30 @@ common/Protocol.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileServer.dir\build.make CMakeFiles/FileServer.dir/common/Protocol.cpp.s
 .PHONY : common/Protocol.cpp.s
 
+server/ClientConnection.obj: server/ClientConnection.cpp.obj
+.PHONY : server/ClientConnection.obj
+
+# target to build an object file
+server/ClientConnection.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileServer.dir\build.make CMakeFiles/FileServer.dir/server/ClientConnection.cpp.obj
+.PHONY : server/ClientConnection.cpp.obj
+
+server/ClientConnection.i: server/ClientConnection.cpp.i
+.PHONY : server/ClientConnection.i
+
+# target to preprocess a source file
+server/ClientConnection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileServer.dir\build.make CMakeFiles/FileServer.dir/server/ClientConnection.cpp.i
+.PHONY : server/ClientConnection.cpp.i
+
+server/ClientConnection.s: server/ClientConnection.cpp.s
+.PHONY : server/ClientConnection.s
+
+# target to generate assembly for a file
+server/ClientConnection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileServer.dir\build.make CMakeFiles/FileServer.dir/server/ClientConnection.cpp.s
+.PHONY : server/ClientConnection.cpp.s
+
 server/FileServer.obj: server/FileServer.cpp.obj
 .PHONY : server/FileServer.obj
 
@@ -387,6 +411,30 @@ server/FileServer.s: server/FileServer.cpp.s
 server/FileServer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileServer.dir\build.make CMakeFiles/FileServer.dir/server/FileServer.cpp.s
 .PHONY : server/FileServer.cpp.s
+
+server/TransferReceiver.obj: server/TransferReceiver.cpp.obj
+.PHONY : server/TransferReceiver.obj
+
+# target to build an object file
+server/TransferReceiver.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileServer.dir\build.make CMakeFiles/FileServer.dir/server/TransferReceiver.cpp.obj
+.PHONY : server/TransferReceiver.cpp.obj
+
+server/TransferReceiver.i: server/TransferReceiver.cpp.i
+.PHONY : server/TransferReceiver.i
+
+# target to preprocess a source file
+server/TransferReceiver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileServer.dir\build.make CMakeFiles/FileServer.dir/server/TransferReceiver.cpp.i
+.PHONY : server/TransferReceiver.cpp.i
+
+server/TransferReceiver.s: server/TransferReceiver.cpp.s
+.PHONY : server/TransferReceiver.s
+
+# target to generate assembly for a file
+server/TransferReceiver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileServer.dir\build.make CMakeFiles/FileServer.dir/server/TransferReceiver.cpp.s
+.PHONY : server/TransferReceiver.cpp.s
 
 server/main.obj: server/main.cpp.obj
 .PHONY : server/main.obj
@@ -447,9 +495,15 @@ help:
 	@echo ... common/Protocol.obj
 	@echo ... common/Protocol.i
 	@echo ... common/Protocol.s
+	@echo ... server/ClientConnection.obj
+	@echo ... server/ClientConnection.i
+	@echo ... server/ClientConnection.s
 	@echo ... server/FileServer.obj
 	@echo ... server/FileServer.i
 	@echo ... server/FileServer.s
+	@echo ... server/TransferReceiver.obj
+	@echo ... server/TransferReceiver.i
+	@echo ... server/TransferReceiver.s
 	@echo ... server/main.obj
 	@echo ... server/main.i
 	@echo ... server/main.s

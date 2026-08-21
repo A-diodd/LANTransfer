@@ -3,11 +3,11 @@
 
 #include <QObject>
 #include <QTcpServer>
+#include <QList>
 #include "../common/Protocol.h"
-#include <QJsonObject>
-#include <QFile>
-#include <QString>
-#include <QCryptographicHash>
+
+class ClientConnection;
+class TransferReceiver;
 
 
 class FileServer : public QObject
@@ -21,47 +21,15 @@ public:
 
 private slots:
     void onNewConnection();
-    void onReadyRead();
 
-private:
-
-
-    void handleMessage(
-        QTcpSocket *socket,
-        Protocol::MessageType type,
-        const QByteArray &payload);
-    
-    void handleHello(
-        QTcpSocket *socket,
-        const QByteArray &payload);
-
-    void handleFileInfo(
-        QTcpSocket *socket,
-        const QByteArray &payload);
-
-    void handleFileData(
-        QTcpSocket *socket,
-        const QByteArray &payload);
-
-    void handleFileFinish(
-        QTcpSocket *socket,
-        const QByteArray &payload);
+    void onClientDisconnected(ClientConnection *connection);
 
 
 private:
 
     QTcpServer *server;
 
-    QByteArray buffer;
-
-    QFile receiveFile;
-
-    qint64 expectedSize = 0;
-    qint64 receivedSize = 0;
-
-    QCryptographicHash receiveHash{
-        QCryptographicHash::Sha256
-    };
+    QList<ClientConnection *> clients;
 };
 
 #endif // FILESERVER_H

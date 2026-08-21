@@ -120,11 +120,41 @@ CMakeFiles/FileServer.dir/server/FileServer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FileServer.dir/server/FileServer.cpp.s"
 	D:\02_app\qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\01_Study\08_qt\LANTransfer\server\FileServer.cpp -o CMakeFiles\FileServer.dir\server\FileServer.cpp.s
 
+CMakeFiles/FileServer.dir/server/ClientConnection.cpp.obj: CMakeFiles/FileServer.dir/flags.make
+CMakeFiles/FileServer.dir/server/ClientConnection.cpp.obj: CMakeFiles/FileServer.dir/includes_CXX.rsp
+CMakeFiles/FileServer.dir/server/ClientConnection.cpp.obj: D:/01_Study/08_qt/LANTransfer/server/ClientConnection.cpp
+CMakeFiles/FileServer.dir/server/ClientConnection.cpp.obj: CMakeFiles/FileServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\01_Study\08_qt\LANTransfer\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/FileServer.dir/server/ClientConnection.cpp.obj"
+	D:\02_app\qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FileServer.dir/server/ClientConnection.cpp.obj -MF CMakeFiles\FileServer.dir\server\ClientConnection.cpp.obj.d -o CMakeFiles\FileServer.dir\server\ClientConnection.cpp.obj -c D:\01_Study\08_qt\LANTransfer\server\ClientConnection.cpp
+
+CMakeFiles/FileServer.dir/server/ClientConnection.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FileServer.dir/server/ClientConnection.cpp.i"
+	D:\02_app\qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\01_Study\08_qt\LANTransfer\server\ClientConnection.cpp > CMakeFiles\FileServer.dir\server\ClientConnection.cpp.i
+
+CMakeFiles/FileServer.dir/server/ClientConnection.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FileServer.dir/server/ClientConnection.cpp.s"
+	D:\02_app\qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\01_Study\08_qt\LANTransfer\server\ClientConnection.cpp -o CMakeFiles\FileServer.dir\server\ClientConnection.cpp.s
+
+CMakeFiles/FileServer.dir/server/TransferReceiver.cpp.obj: CMakeFiles/FileServer.dir/flags.make
+CMakeFiles/FileServer.dir/server/TransferReceiver.cpp.obj: CMakeFiles/FileServer.dir/includes_CXX.rsp
+CMakeFiles/FileServer.dir/server/TransferReceiver.cpp.obj: D:/01_Study/08_qt/LANTransfer/server/TransferReceiver.cpp
+CMakeFiles/FileServer.dir/server/TransferReceiver.cpp.obj: CMakeFiles/FileServer.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\01_Study\08_qt\LANTransfer\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/FileServer.dir/server/TransferReceiver.cpp.obj"
+	D:\02_app\qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FileServer.dir/server/TransferReceiver.cpp.obj -MF CMakeFiles\FileServer.dir\server\TransferReceiver.cpp.obj.d -o CMakeFiles\FileServer.dir\server\TransferReceiver.cpp.obj -c D:\01_Study\08_qt\LANTransfer\server\TransferReceiver.cpp
+
+CMakeFiles/FileServer.dir/server/TransferReceiver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FileServer.dir/server/TransferReceiver.cpp.i"
+	D:\02_app\qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E D:\01_Study\08_qt\LANTransfer\server\TransferReceiver.cpp > CMakeFiles\FileServer.dir\server\TransferReceiver.cpp.i
+
+CMakeFiles/FileServer.dir/server/TransferReceiver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FileServer.dir/server/TransferReceiver.cpp.s"
+	D:\02_app\qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S D:\01_Study\08_qt\LANTransfer\server\TransferReceiver.cpp -o CMakeFiles\FileServer.dir\server\TransferReceiver.cpp.s
+
 CMakeFiles/FileServer.dir/common/Protocol.cpp.obj: CMakeFiles/FileServer.dir/flags.make
 CMakeFiles/FileServer.dir/common/Protocol.cpp.obj: CMakeFiles/FileServer.dir/includes_CXX.rsp
 CMakeFiles/FileServer.dir/common/Protocol.cpp.obj: D:/01_Study/08_qt/LANTransfer/common/Protocol.cpp
 CMakeFiles/FileServer.dir/common/Protocol.cpp.obj: CMakeFiles/FileServer.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\01_Study\08_qt\LANTransfer\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/FileServer.dir/common/Protocol.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=D:\01_Study\08_qt\LANTransfer\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/FileServer.dir/common/Protocol.cpp.obj"
 	D:\02_app\qt\Tools\mingw1310_64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FileServer.dir/common/Protocol.cpp.obj -MF CMakeFiles\FileServer.dir\common\Protocol.cpp.obj.d -o CMakeFiles\FileServer.dir\common\Protocol.cpp.obj -c D:\01_Study\08_qt\LANTransfer\common\Protocol.cpp
 
 CMakeFiles/FileServer.dir/common/Protocol.cpp.i: cmake_force
@@ -140,6 +170,8 @@ FileServer_OBJECTS = \
 "CMakeFiles/FileServer.dir/FileServer_autogen/mocs_compilation.cpp.obj" \
 "CMakeFiles/FileServer.dir/server/main.cpp.obj" \
 "CMakeFiles/FileServer.dir/server/FileServer.cpp.obj" \
+"CMakeFiles/FileServer.dir/server/ClientConnection.cpp.obj" \
+"CMakeFiles/FileServer.dir/server/TransferReceiver.cpp.obj" \
 "CMakeFiles/FileServer.dir/common/Protocol.cpp.obj"
 
 # External object files for target FileServer
@@ -148,6 +180,8 @@ FileServer_EXTERNAL_OBJECTS =
 FileServer.exe: CMakeFiles/FileServer.dir/FileServer_autogen/mocs_compilation.cpp.obj
 FileServer.exe: CMakeFiles/FileServer.dir/server/main.cpp.obj
 FileServer.exe: CMakeFiles/FileServer.dir/server/FileServer.cpp.obj
+FileServer.exe: CMakeFiles/FileServer.dir/server/ClientConnection.cpp.obj
+FileServer.exe: CMakeFiles/FileServer.dir/server/TransferReceiver.cpp.obj
 FileServer.exe: CMakeFiles/FileServer.dir/common/Protocol.cpp.obj
 FileServer.exe: CMakeFiles/FileServer.dir/build.make
 FileServer.exe: D:/02_app/qt/6.11.1/mingw_64/lib/libQt6Network.a
@@ -156,7 +190,7 @@ FileServer.exe: FileServer.exe.manifest
 FileServer.exe: CMakeFiles/FileServer.dir/linkLibs.rsp
 FileServer.exe: CMakeFiles/FileServer.dir/objects1.rsp
 FileServer.exe: CMakeFiles/FileServer.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\01_Study\08_qt\LANTransfer\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable FileServer.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=D:\01_Study\08_qt\LANTransfer\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable FileServer.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\FileServer.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

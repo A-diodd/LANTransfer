@@ -62,12 +62,6 @@ bool NetworkManager::isConnected() const
 
 void NetworkManager::onConnected()
 {
-    QByteArray payload;
-	QByteArray message=
-        Protocol::buildMessage(
-            Protocol::MessageType::Hello,
-			payload);
-    sendData(message);
     emit connected();
 }
 

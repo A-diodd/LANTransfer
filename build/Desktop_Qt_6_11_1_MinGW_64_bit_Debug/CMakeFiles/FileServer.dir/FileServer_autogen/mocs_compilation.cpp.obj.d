@@ -1,7 +1,7 @@
 CMakeFiles/FileServer.dir/FileServer_autogen/mocs_compilation.cpp.obj: \
  D:\01_Study\08_qt\LANTransfer\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\FileServer_autogen\mocs_compilation.cpp \
- D:\01_Study\08_qt\LANTransfer\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\FileServer_autogen\ORNZQ2F6DW/moc_FileServer.cpp \
- D:/01_Study/08_qt/LANTransfer/server/FileServer.h \
+ D:\01_Study\08_qt\LANTransfer\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\FileServer_autogen\ORNZQ2F6DW/moc_ClientConnection.cpp \
+ D:/01_Study/08_qt/LANTransfer/server/ClientConnection.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QObject \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qobject.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qobjectdefs.h \
@@ -323,8 +323,8 @@ CMakeFiles/FileServer.dir/FileServer_autogen/mocs_compilation.cpp.obj: \
  D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/chrono.h \
  D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ratio \
  D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/ctime \
- D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/QTcpServer \
- D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qtcpserver.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/QTcpSocket \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qtcpsocket.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qtnetworkglobal.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qtnetwork-config.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qtnetworkexports.h \
@@ -335,17 +335,6 @@ CMakeFiles/FileServer.dir/FileServer_autogen/mocs_compilation.cpp.obj: \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q20iterator.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qhostaddress.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qshareddata.h \
- D:/01_Study/08_qt/LANTransfer/common/Protocol.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QByteArray \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QString \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QJsonObject \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonobject.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonvalue.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcborvalue.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcborcommon.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdatetime.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcalendar.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qlocale.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qvariant.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdebug.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtextstream.h \
@@ -366,12 +355,33 @@ CMakeFiles/FileServer.dir/FileServer_autogen/mocs_compilation.cpp.obj: \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qalloc.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q23utility.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q20utility.h \
+ D:/01_Study/08_qt/LANTransfer/common/Protocol.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QByteArray \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QString \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QJsonObject \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonobject.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonvalue.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcborvalue.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcborcommon.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qdatetime.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcalendar.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qlocale.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qregularexpression.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qurl.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/quuid.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qendian.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsondocument.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qjsonparseerror.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtmochelpers.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtmocconstants.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q20algorithm.h \
+ D:\01_Study\08_qt\LANTransfer\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\FileServer_autogen\ORNZQ2F6DW/moc_FileServer.cpp \
+ D:/01_Study/08_qt/LANTransfer/server/FileServer.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/QTcpServer \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qtcpserver.h \
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QList \
+ D:\01_Study\08_qt\LANTransfer\build\Desktop_Qt_6_11_1_MinGW_64_bit_Debug\FileServer_autogen\ORNZQ2F6DW/moc_TransferReceiver.cpp \
+ D:/01_Study/08_qt/LANTransfer/server/TransferReceiver.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QFile \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfile.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qfiledevice.h \
@@ -406,7 +416,4 @@ CMakeFiles/FileServer.dir/FileServer_autogen/mocs_compilation.cpp.obj: \
  D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_dir.h \
  D:/02_app/qt/Tools/mingw1310_64/lib/gcc/x86_64-w64-mingw32/13.1.0/include/c++/bits/fs_ops.h \
  D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QCryptographicHash \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcryptographichash.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtmochelpers.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qtmocconstants.h \
- D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q20algorithm.h
+ D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qcryptographichash.h

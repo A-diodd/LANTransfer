@@ -11,7 +11,9 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "" "FileServer_autogen/timestamp" "custom" "FileServer_autogen/deps"
   "D:/01_Study/08_qt/LANTransfer/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/FileServer_autogen/mocs_compilation.cpp" "CMakeFiles/FileServer.dir/FileServer_autogen/mocs_compilation.cpp.obj" "gcc" "CMakeFiles/FileServer.dir/FileServer_autogen/mocs_compilation.cpp.obj.d"
   "D:/01_Study/08_qt/LANTransfer/common/Protocol.cpp" "CMakeFiles/FileServer.dir/common/Protocol.cpp.obj" "gcc" "CMakeFiles/FileServer.dir/common/Protocol.cpp.obj.d"
+  "D:/01_Study/08_qt/LANTransfer/server/ClientConnection.cpp" "CMakeFiles/FileServer.dir/server/ClientConnection.cpp.obj" "gcc" "CMakeFiles/FileServer.dir/server/ClientConnection.cpp.obj.d"
   "D:/01_Study/08_qt/LANTransfer/server/FileServer.cpp" "CMakeFiles/FileServer.dir/server/FileServer.cpp.obj" "gcc" "CMakeFiles/FileServer.dir/server/FileServer.cpp.obj.d"
+  "D:/01_Study/08_qt/LANTransfer/server/TransferReceiver.cpp" "CMakeFiles/FileServer.dir/server/TransferReceiver.cpp.obj" "gcc" "CMakeFiles/FileServer.dir/server/TransferReceiver.cpp.obj.d"
   "D:/01_Study/08_qt/LANTransfer/server/main.cpp" "CMakeFiles/FileServer.dir/server/main.cpp.obj" "gcc" "CMakeFiles/FileServer.dir/server/main.cpp.obj.d"
   )
 

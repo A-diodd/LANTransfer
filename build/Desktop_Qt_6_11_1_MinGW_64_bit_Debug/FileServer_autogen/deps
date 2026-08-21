@@ -9,13 +9,18 @@ FileServer_autogen/timestamp: \
 	D:/01_Study/08_qt/LANTransfer/build/Desktop_Qt_6_11_1_MinGW_64_bit_Debug/FileServer_autogen/moc_predefs.h \
 	D:/01_Study/08_qt/LANTransfer/common/Protocol.cpp \
 	D:/01_Study/08_qt/LANTransfer/common/Protocol.h \
+	D:/01_Study/08_qt/LANTransfer/server/ClientConnection.cpp \
+	D:/01_Study/08_qt/LANTransfer/server/ClientConnection.h \
 	D:/01_Study/08_qt/LANTransfer/server/FileServer.cpp \
 	D:/01_Study/08_qt/LANTransfer/server/FileServer.h \
+	D:/01_Study/08_qt/LANTransfer/server/TransferReceiver.cpp \
+	D:/01_Study/08_qt/LANTransfer/server/TransferReceiver.h \
 	D:/01_Study/08_qt/LANTransfer/server/main.cpp \
 	D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QByteArray \
 	D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QCryptographicHash \
 	D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QFile \
 	D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QJsonObject \
+	D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QList \
 	D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QObject \
 	D:/02_app/qt/6.11.1/mingw_64/include/QtCore/QString \
 	D:/02_app/qt/6.11.1/mingw_64/include/QtCore/q17memory.h \
@@ -157,9 +162,11 @@ FileServer_autogen/timestamp: \
 	D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qxptype_traits.h \
 	D:/02_app/qt/6.11.1/mingw_64/include/QtCore/qyieldcpu.h \
 	D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/QTcpServer \
+	D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/QTcpSocket \
 	D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qabstractsocket.h \
 	D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qhostaddress.h \
 	D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qtcpserver.h \
+	D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qtcpsocket.h \
 	D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qtnetwork-config.h \
 	D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qtnetworkexports.h \
 	D:/02_app/qt/6.11.1/mingw_64/include/QtNetwork/qtnetworkglobal.h \
